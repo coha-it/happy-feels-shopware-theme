@@ -28,7 +28,7 @@ SHOPWARE_EOD;
         'src/js/assets/js/lib/greensock/TweenMax.min.js',
         'src/js/scrollmagic/minified/ScrollMagic.min.js',
         'src/js/scrollmagic/minified/plugins/animation.gsap.min.js',
-        'src/js/scrollmagic/minified/plugins/debug.addIndicators.min.js',
+        // 'src/js/scrollmagic/minified/plugins/debug.addIndicators.min.js',
     ];
 
     public function createConfig(Form\Container\TabContainer $container)
