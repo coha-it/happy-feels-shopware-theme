@@ -1,7 +1,16 @@
 {extends file="parent:widgets/checkout/info.tpl"}
 
-{* My account entry *}
-{block name="frontend_index_checkout_actions_my_options"}
+{* Cart entry *}
+{block name="frontend_index_checkout_actions_cart"}
+
+    <li class="navigation--entry entry--cart" role="menuitem">
+        {s namespace="frontend/index/checkout_actions" name="IndexLinkCart" assign="snippetIndexLinkCart"}{/s}
+        <a class="navigation--link" href="{url controller='checkout' action='cart'}" title="{$snippetIndexLinkCart|escape}">
+            <img class="thin-icon bag" src="{link file='frontend/_public/src/img/icons/bag.svg'}" alt="" />
+        </a>
+        <div class="ajax-loader">&nbsp;</div>
+    </li>
+
     <li class="navigation--entry entry--account{if {config name=useSltCookie} || $sOneTimeAccount} with-slt{/if}"
         role="menuitem"
         data-offcanvas="true"
@@ -37,15 +46,9 @@
             {/block}
         {/if}
     </li>
+
 {/block}
 
-{* Cart entry *}
-{block name="frontend_index_checkout_actions_cart"}
-    <li class="navigation--entry entry--cart" role="menuitem">
-        {s namespace="frontend/index/checkout_actions" name="IndexLinkCart" assign="snippetIndexLinkCart"}{/s}
-        <a class="navigation--link" href="{url controller='checkout' action='cart'}" title="{$snippetIndexLinkCart|escape}">
-            <img class="thin-icon bag" src="{link file='frontend/_public/src/img/icons/bag.svg'}" alt="" />
-        </a>
-        <div class="ajax-loader">&nbsp;</div>
-    </li>
-{/block}
+
+{* My account entry *}
+{block name="frontend_index_checkout_actions_my_options"}{/block}

@@ -32,7 +32,7 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 
 .navigation-main .navigation--link { text-transform: uppercase; color: #000; font-weight: 500; position: relative;position: relative;font-size: 14px;}
 .navigation-main .navigation--link:after {content: "";position: absolute;width: 0%;min-width: 0;background: #efd84d;height: 4px;left: 0;right: 0;bottom: -1px;margin: auto;transition: 200ms;}
-.navigation-main .navigation--link:hover:after {width: calc(75% - 30px); }
+.navigation-main .navigation--link:hover:after {width: calc(75% - 30px);min-width: 30px;}
 
 .navigation-main .is--active .navigation--link {background: transparent;font-weight: 500;color: #54656c;}
 .navigation-main .is--active .navigation--link:hover {color: #54656c;}
@@ -75,8 +75,11 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 
 
 /* EXPERIMENTAL */
-.navigation-main > .container {max-width: 1380px; padding: 0 15px;}
-.content-main {background: transparent; box-shadow: unset; margin-top: 0; max-width: 1380px;}
+.navigation-main > .container {max-width: 1500px;padding: 0 15px;}
+.content-main {background: transparent;box-shadow: unset;margin-top: 0;max-width: 1440px;}
 .content-main--inner {}
 .emotion--wrapper {max-width: 1360px;}
+.emotion--wrapper .emotion--container {background: transparent;}
+.navigation--list-wrapper .navigation--entry {}
+.navigation--list-wrapper .navigation--entry.entry--account {padding-right: 14px;} 
 /* //EXPERIMENTAL */
