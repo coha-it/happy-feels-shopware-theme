@@ -44,9 +44,10 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 /* Center Logo */
 .header-main {position: relative;}
 .header-main .header--navigation {position: static;padding: 0;width: 100%;}
-.header-main .logo-main {left: 0;right: 0;margin: auto;float: none;overflow: visible;clear: both;width: 13rem;height: 7.5rem;text-align: center;top: 0;bottom: 0;z-index: 9;margin: auto;padding: 15px 20px;}
+.header-main .logo-main {left: 0;right: 0;margin: auto;float: none;overflow: visible;clear: both;width: 13rem;width: min-content;width: fit-content;height: 7.5rem;height: 100%;text-align: center;top: 0;bottom: 0;z-index: 9;margin: auto;padding: 15px;}
 .header-main .logo-main .logo--shop { width: 100%; height: 100%;}
 .header-main .logo-main .logo--link { height: 100%; width: 100%;}
+.header-main .logo-main .logo--link picture img {display: inline-block;}
 
 .navigation-main {border-bottom: 1px solid #e6e6e6;}
 .navigation-main > .container {background: transparent;}
