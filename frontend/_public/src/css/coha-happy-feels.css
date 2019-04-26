@@ -1,3 +1,8 @@
+/* Selection-Colour */
+::-moz-selection {      background: #efd84d; color: #fff; }
+::selection {           background: #efd84d; color: #fff; }
+
+
 textarea,
 input[type="text"],
 input[type="search"],
@@ -63,7 +68,7 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 
 /* Tablet */
 @media screen and (min-width: 770px) {
-    .header-main .header-inner {height: 150px;}
+    .header-main .header-inner {height: 170px;height: 100%;}
     .header-main .logo-main {padding: 12px;}
 
     .navigation-main > .container {padding-bottom: 10px;}
