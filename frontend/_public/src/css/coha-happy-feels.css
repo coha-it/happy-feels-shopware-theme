@@ -108,6 +108,18 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 /* //EXPERIMENTAL */
 
 
+/* SIDEBAR AND FILTER */
+.sidebar--navigation {border: 0;background: transparent;}
+.sidebar--navigation .navigation--entry {border: 0;margin: 0;}
+.sidebar--navigation .navigation--link {padding-right: 0;padding-left: 0;}
+.sidebar--navigation .navigation--link.is--active {color: #000;}
+.sidebar--navigation .navigation--link.is--active:after {content: ""; border-radius: 100%;border: 4px solid #E95323;display: inline-block;line-height: 5rem;margin-bottom: .5em;}
+
+.listing--sidebar .sidebar-filter .action--filter-options {border: 0; background: transparent;}
+.listing--sidebar .sidebar-filter .filter--container {padding: 0;}
+.listing--sidebar .sidebar-filter .filter--container .filter-panel {background: transparent; border-width: 0px 0 0px; border-radius: 0;}
+/* // SIDEBAR AND FILTER */
+
 
 /* Happiness Circles */
 .happy-circles {width: 100%;height: 100%;min-height: 200px;height: 80vw;max-height: 500px;min-width: 200px;width: 80vw;width: 100%;max-width: 500px;margin: 0;text-align: center;display: inline-block;position: relative;overflow: visible;}
