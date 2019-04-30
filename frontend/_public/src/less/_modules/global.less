@@ -36,21 +36,27 @@ h1 {
     //.unitize(line-height, 28);
     //.unitize-margin(34, 0, 20, 0);
     //color: @text-color-dark;
+}
 
-    position: relative;
-
-    &:before {
-        content: "";
-        background-color: #E95323;
-        width: 0;
-        height: 0;
-        padding: .275em;
-        border-radius: 100%;
-        position: absolute;
-        right: 100%;
-        bottom: 100%;
-        margin: 0 0.3275em -0.3275em 0;
-        pointer-events: none;
-        z-index: 1;
+.emotion--wrapper {
+    h1,
+    h2,
+    h3 {
+        position: relative;
+        &:before {
+            content: "";
+            background-color: #E95323;
+            width: 0;
+            height: 0;
+            padding: .275em;
+            border-radius: 100%;
+            position: absolute;
+            right: 100%;
+            bottom: 100%;
+            margin: 0 0.3275em -0.3275em 0;
+            pointer-events: none;
+            z-index: 1;
+        }
     }
+
 }

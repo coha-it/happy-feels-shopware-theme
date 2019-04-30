@@ -47,7 +47,7 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 
 
 /* Center Logo */
-.header-main {position: relative;width: 100% !important;}
+.header-main {position: relative;width: 100% !important;z-index: 1000;}
 .header-main .header-inner {height: 100%; width: 100%;}
 .header-main .header--navigation {position: static;padding: 0;width: 100%;}
 .header-main .logo-main {left: 0;right: 0;margin: auto;float: none;overflow: visible;clear: both;width: 13rem;/* width: min-content; *//* width: fit-content; */height: 8.5rem;height: 100%;min-height: 65px;max-height: 110px;/* height: 100%; */text-align: center;top: 0;bottom: 0;z-index: 9;margin: auto;padding: 10px;}
@@ -57,7 +57,6 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 
 .navigation-main {border-bottom: 1px solid #e6e6e6;}
 .navigation-main > .container {background: transparent;}
-.navigation-main .container .navigation--list-wrapper {height: 100%;width: 100%;justify-content: space-between;vertical-align: middle;display: flex;align-items: center;padding-bottom: 20px;padding: 0;}
 
 
 .shop--navigation { width: 100%;}
@@ -86,6 +85,7 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
     .header-main .header--navigation {display: flex;align-items: center;justify-content: inherit;}
 
     .navigation-main > .container {max-width: 1500px;padding: 0 15px;height: 100%;}
+    .navigation-main .container .navigation--list-wrapper {height: 100%;width: 100%;justify-content: space-between;vertical-align: middle;display: flex;align-items: center;padding-bottom: 20px;padding: 0;}
 }
 
 @media screen and (max-width: 767px) {
@@ -106,3 +106,91 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 .navigation--list-wrapper .navigation--entry {}
 .navigation--list-wrapper .navigation--entry.entry--account {padding-right: 14px;} 
 /* //EXPERIMENTAL */
+
+
+
+/* Happiness Circles */
+.happy-circles {width: 100%;height: 100%;min-height: 200px;height: 80vw;max-height: 500px;min-width: 200px;width: 80vw;max-width: 500px;margin: 0;text-align: center;display: inline-block;position: relative;overflow: visible;}
+
+.happy-circle {transition: 250ms;transform: scale(1);animation-name: rotate5deg;animation-duration: 10s;animation-iteration-count: infinite;animation-direction: alternate;position: absolute;width: 100%;width: fit-content;height: 100%;margin: auto;left: 0;right: 0;top: 0;bottom: 0;display: inline-block;text-align: center;overflow: visible;}
+.happy-circle.inn {transform: rotate(-7deg);animation-name: rotate7deg;animation-duration: 13s;animation-delay: 0s;width: 25%;width: fit-content;height: 25%;animation-direction: alternate-reverse;}
+.happy-circle.mid {transform: rotate( 5deg);animation-name: rotate5deg;animation-duration: 11s;animation-delay: 1s;width: 62%;width: fit-content;height: 62%;animation-direction: alternate;}
+.happy-circle.out {transform: rotate(-3deg);animation-name: rotate3deg;animation-duration: 10s;animation-delay: 3s;width: fit-content;animation-direction: alternate-reverse;border-radius: 100%;}
+
+.happy-circle div {height: 100%;width: auto;text-align: center;overflow: visible;position: relative;}
+.happy-circle svg {height: 100%;width: 100%;transition: 200ms;width: auto;z-index: 1;border-radius: 25%;overflow: visible;}
+
+
+.happy-circle:hover     {/*animation-play-state: paused;*/}
+.happy-circle.inn:hover {}
+.happy-circle.mid:hover {}
+.happy-circle.out:hover {}
+
+.happy-circle svg:hover {transform: scale(1.01); z-index: 2;}
+.happy-circle.inn svg:hover,
+.happy-circle.inn svg:hover + .dot svg {transform: scale(1.070); }
+.happy-circle.mid svg:hover,
+.happy-circle.mid svg:hover + .dot svg {transform: scale(1.030); }
+.happy-circle.out svg:hover,
+.happy-circle.out svg:hover + .dot svg {transform: scale(1.008); }
+
+/* DOT & DOT Hover */
+.happy-circle .dot {position: absolute;left: 0;right: 0;margin: 0;top: 0;bottom: 0;pointer-events: none;transition: 4s ease-in-out;animation: rotateDot 12s cubic-bezier(0.4, -0.01, 0.6, 1) infinite alternate-reverse; }
+.happy-circle.mid .dot {animation-direction: alternate-reverse;         animation-duration: 10s; }
+.happy-circle.out .dot {animation-direction: alternate;                 animation-duration: 11s; animation-delay: 1s;}
+.happy-circle svg:hover + .dot svg {}
+.happy-circle.inn svg:hover + .dot svg {transform: scale(1.070) rotate(-5deg); }
+.happy-circle.mid svg:hover + .dot svg {transform: scale(1.030) rotate(-5deg); }
+.happy-circle.out svg:hover + .dot svg {transform: scale(1.008) rotate(-5deg); }
+
+/* CLICKED */
+.happy-circle.clicked .dot svg {transition: 5s linear; transform: rotate(-179deg) !important;}
+
+/* Animations */
+@keyframes rotate {
+    0%    {transform: rotate(0); }
+  100%    {transform: rotate(360deg);}
+}
+@-webkit-keyframes rotate {
+    0%    {transform: rotate(0); }
+  100%    {transform: rotate(360deg);}
+}
+
+@keyframes rotateDot {
+    0%    {transform: rotate(0); }
+  100%    {transform: rotate(-7deg);}
+}
+@-webkit-keyframes rotateDot {
+    0%    {transform: rotate(0); }
+  100%    {transform: rotate(-7deg);}
+}
+
+@-webkit-keyframes rotate7deg {
+    0%    {transform: rotate(7deg); }
+  100%    {transform: rotate(-7deg);}
+}
+
+@keyframes rotate7deg {
+    0%    {transform: rotate(7deg); }
+  100%    {transform: rotate(-7deg);}
+}
+
+@-webkit-keyframes rotate5deg {
+    0%    {transform: rotate(5deg); }
+  100%    {transform: rotate(-5deg);}
+}
+
+@keyframes rotate5deg {
+    0%    {transform: rotate(5deg); }
+  100%    {transform: rotate(-5deg);}
+}
+
+@-webkit-keyframes rotate3deg {
+    0%    {transform: rotate(3deg); }
+  100%    {transform: rotate(-3deg);}
+}
+
+@keyframes rotate3deg {
+    0%    {transform: rotate(3deg); }
+  100%    {transform: rotate(-3deg);}
+}
