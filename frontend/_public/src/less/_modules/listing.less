@@ -1,0 +1,26 @@
+/*
+Listing
+==========================================
+Contains the styles of the product listing and its components.
+
+The styling defines the listing components such as the product filter element.
+
+It contains the viewport specific styles inside media queries.
+*/
+
+    // Tablet view
+@media screen and(min-width: @tabletViewportWidth) {
+
+    .listing--actions {
+        background: transparent;
+        border: 0;
+    }
+}
+
+.listing--wrapper {
+    &.has--sidebar-filter {
+        .action--sort {
+            margin: 0;
+        }
+    }
+}
