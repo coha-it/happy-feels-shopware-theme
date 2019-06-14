@@ -125,13 +125,13 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 /* Happiness Circles */
 .happy-circles {width: 100%;height: 100%;min-height: 200px;height: 80vw;max-height: 500px;min-width: 200px;width: 80vw;width: 100%;max-width: 500px;margin: 0;text-align: center;display: inline-block;position: relative;overflow: visible;}
 
-.happy-circle {transition: 250ms;transform: scale(1);animation-name: rotate5deg;animation-duration: 10s;animation-iteration-count: infinite;animation-direction: alternate;position: absolute;width: 100%;width: fit-content;height: 100%;margin: auto;left: 0;right: 0;top: 0;bottom: 0;display: inline-block;text-align: center;overflow: visible;width: 100%;}
-.happy-circle.inn {transform: rotate(-7deg);transform: none;animation-name: rotate3deg;animation-name: none;animation-duration: 13s;animation-delay: 0s;width: 25%;/* width: fit-content; */height: 25%;animation-direction: alternate-reverse;}
-.happy-circle.mid {transform: rotate( 5deg);animation-name: rotate5deg;animation-duration: 11s;animation-delay: 1s;width: 62%;/* width: fit-content; */height: 62%;animation-direction: alternate;}
-.happy-circle.out {transform: rotate(-3deg);animation-name: rotate3deg;animation-duration: 10s;animation-delay: 3s;width: 100%;animation-direction: alternate-reverse;border-radius: 100%;}
+.happy-circle .inner {transition: 250ms;transform: scale(1);animation-name: rotate5deg;animation-duration: 10s;animation-iteration-count: infinite;animation-direction: alternate;position: absolute;width: 100%;width: fit-content;height: 100%;margin: auto;left: 0;right: 0;top: 0;bottom: 0;display: inline-block;text-align: center;overflow: visible;width: 100%;}
+.happy-circle.inn .inner {transform: rotate(-7deg);transform: none;animation-name: rotate3deg;animation-name: none;animation-duration: 13s;animation-delay: 0s;width: 25%;/* width: fit-content; */height: 25%;animation-direction: alternate-reverse;}
+.happy-circle.mid .inner {transform: rotate( 5deg);animation-name: rotate5deg;animation-duration: 11s;animation-delay: 1s;width: 62%;/* width: fit-content; */height: 62%;animation-direction: alternate;}
+.happy-circle.out .inner {transform: rotate(-3deg);animation-name: rotate3deg;animation-duration: 10s;animation-delay: 3s;width: 100%;animation-direction: alternate-reverse;border-radius: 100%;}
 
 .happy-circle div {height: 100%;width: auto;text-align: center;overflow: visible;position: relative;}
-.happy-circle svg {height: 100%;width: 100%;transition: 200ms;z-index: 1;border-radius: 25%;overflow: visible;}
+.happy-circle .svg {height: 100%;width: 100%;transition: 200ms;z-index: 1;border-radius: 25%;overflow: visible;}
 
 
 .happy-circle:hover     {/*animation-play-state: paused;*/}
@@ -139,28 +139,38 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 .happy-circle.mid:hover {}
 .happy-circle.out:hover {}
 
-.happy-circle svg:hover {transform: scale(1.01); z-index: 2;}
-.happy-circle.inn svg:hover,
-.happy-circle.inn svg:hover + .dot svg {transform: scale(1.070); }
-.happy-circle.mid svg:hover,
-.happy-circle.mid svg:hover + .dot svg {transform: scale(1.030); }
-.happy-circle.out svg:hover,
-.happy-circle.out svg:hover + .dot svg {transform: scale(1.008); }
+.happy-circle .svg:hover {transform: scale(1.01); z-index: 2;}
+.happy-circle.inn .svg:hover,
+.happy-circle.inn .svg:hover + .dot .svg {transform: scale(1.070); }
+.happy-circle.mid .svg:hover,
+.happy-circle.mid .svg:hover + .dot .svg {transform: scale(1.030); }
+.happy-circle.out .svg:hover,
+.happy-circle.out .svg:hover + .dot .svg {transform: scale(1.008); }
 
   /* DOT & DOT Hover */
 .happy-circle .dot {position: absolute;left: 0;right: 0;margin: 0;top: 0;bottom: 0;pointer-events: none;transition: 4s ease-in-out;animation: rotateDot 12s cubic-bezier(0.4, -0.01, 0.6, 1) infinite alternate-reverse; }
 .happy-circle.mid .dot {animation-direction: alternate-reverse;         animation-duration: 10s; }
 .happy-circle.out .dot {animation-direction: alternate;                 animation-duration: 11s; animation-delay: 1s;}
-.happy-circle svg:hover + .dot svg {}
-.happy-circle.inn svg:hover + .dot svg {transform: scale(1.070) rotate(-5deg); }
-.happy-circle.mid svg:hover + .dot svg {transform: scale(1.030) rotate(-5deg); }
-.happy-circle.out svg:hover + .dot svg {transform: scale(1.008) rotate(-5deg); }
+.happy-circle .svg:hover + .dot .svg {}
+.happy-circle.inn .svg:hover + .dot .svg {transform: scale(1.070) rotate(-5deg); }
+.happy-circle.mid .svg:hover + .dot .svg {transform: scale(1.030) rotate(-5deg); }
+.happy-circle.out .svg:hover + .dot .svg {transform: scale(1.008) rotate(-5deg); }
 
   /* CLICKED */
-.happy-circle.clicked .dot svg {transition: 5s linear; transform: rotate(-179deg) !important;}
+.happy-circle.clicked .dot .svg {transition: 5s linear; transform: rotate(-179deg) !important;}
 
 
+/* Happy Circle: Info-Text */
+.happy-circle .info {opacity: 0; pointer-events: none; transform: scale(.5);transform-origin: 90% 70%;transition: 200ms;position: absolute;bottom: 25%;height: inherit;top: 0;margin: auto;max-width: 250px;padding: 15px 25px;align-items: center;text-align: left;vertical-align: middle;left: -25%;z-index: 9;border-radius: 30px;line-height: 1.25;display: table;color: #425d64;background: #afcdd4;font-weight: 700;}
+.happy-circle.out .info {background: #AFCDD4;}
+.happy-circle.mid .info {background: #FDD02D;}
+.happy-circle.inn .info {background: #EE5220; color: #fff;}
 
+.happy-circle:hover .info,
+.happy-circle       .info:hover { pointer-events: all; opacity: 1;transform: scale(1);}
+
+/* Bridge */
+.happy-circle .info:after {content: "";width: 200%;position: absolute; overflow:hidden; right: -100px;background: transparent;height: 200%;z-index: 0;top: 0;}
 
   /* Circle */
 .coha.circle {position: absolute;pointer-events: none;border-radius: 100%;}
@@ -213,3 +223,4 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
     0%    {transform: rotate(3deg); }
   100%    {transform: rotate(-3deg);}
 }
+
