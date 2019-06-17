@@ -175,6 +175,15 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
   /* Circle */
 .coha.circle {position: absolute;pointer-events: none;border-radius: 100%;}
 
+
+
+/* Product / Article Listing */
+.listing--container {overflow: visible;overflow: inherit;}
+.listing .product--box .box--content {background: #fff;border-color: #ffffff;border: unset;box-shadow: 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,64,67,.16);}
+
+
+
+
 /* Animations */
 @keyframes rotate {
     0%    {transform: rotate(0); }
