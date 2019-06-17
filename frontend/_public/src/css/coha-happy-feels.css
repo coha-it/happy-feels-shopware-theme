@@ -6,6 +6,7 @@
 .inverted ::selection {           background: #efd84d; color: #fff; }
 
 
+
 textarea,
 input[type="text"],
 input[type="search"],
@@ -116,9 +117,10 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 .sidebar--navigation .navigation--link.is--active {color: #000;}
 .sidebar--navigation .navigation--link.is--active:after {content: ""; border-radius: 100%;border: 4px solid #E95323;display: inline-block;line-height: 5rem;margin-bottom: .5em;}
 
-.listing--sidebar .sidebar-filter .action--filter-options {border: 0; }
-.listing--sidebar .sidebar-filter .filter--container {padding: 0;}
-.listing--sidebar .sidebar-filter .filter--container .filter-panel {background: transparent;border-width: 1px;border-radius: 0;border-color: transparent;}
+.action--filter-options.is--collapsed {border: 0;background: transparent;}
+.listing--actions {background: #fff;box-shadow: 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,64,67,.16);}
+.filter--container {padding: 0;}
+.filter--container .filter-panel {background: transparent;border-width: 1px;border-radius: 0;border-color: transparent;}
 /* // SIDEBAR AND FILTER */
 
 
