@@ -188,6 +188,18 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 .box--list.product--box .product--title {height: auto;}
 .box--list.product--box .product--description {height: auto;}
 
+
+@media screen and (min-width: 480px) {
+
+  .box--list.product--box .box--content {padding: 0;}
+
+  .box--list.product--box .product--image .image--element img {margin: auto 0;}
+  .box--list.product--box .product--image {height: 100%;width: 12rem;}
+
+  .box--list.product--box .product--info {padding: 15px 15px;padding-left: 13rem;}
+}
+
+
 /* Animations */
 @keyframes rotate {
     0%    {transform: rotate(0); }
