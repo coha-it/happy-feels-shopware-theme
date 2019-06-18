@@ -26,9 +26,14 @@ SHOPWARE_EOD;
 
     protected $css = [
         //'src/css/aos/aos.css'
+        'src/materialize-css-coha/materialize/bin/materialize.css',
     ];
 
     protected $javascript = [
+
+        // Material Design JS
+        'src/materialize-css-coha/materialize/bin/materialize.js',
+
         'src/js/assets/js/lib/greensock/TweenMax.min.js',
         'src/js/scrollmagic/minified/ScrollMagic.min.js',
         'src/js/scrollmagic/minified/plugins/animation.gsap.min.js',
