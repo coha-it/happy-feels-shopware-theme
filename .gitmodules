@@ -1,0 +1,3 @@
+[submodule "frontend/_public/src/material-css-coha/materialize"]
+	path = frontend/_public/src/material-css-coha/materialize
+	url = https://github.com/Dogfalo/materialize.git
