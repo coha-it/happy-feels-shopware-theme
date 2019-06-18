@@ -185,7 +185,7 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 
 
 /* Product / Article Listing: Full-Width-List */
-.box--list.product--box .product--title {height: auto;}
+.box--list.product--box .product--title {height: auto;font-size: 1.5rem;line-height: 1.25;font-weight: 500;}
 .box--list.product--box .product--description {height: auto;}
 
 
@@ -196,7 +196,7 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
   .box--list.product--box .product--image .image--element img {margin: auto 0;}
   .box--list.product--box .product--image {height: 100%;width: 12rem;}
 
-  .box--list.product--box .product--info {padding: 15px 15px;padding-left: 13rem;}
+  .box--list.product--box .product--info {padding: 15px 15px;padding-left: 14rem;min-height: 190px;}
 }
 
 
