@@ -189,6 +189,14 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 .box--list.product--box .product--description {height: auto;white-space: pre;}
 
 
+/* Product Slider Arrows */
+.product-slider--arrow {background: transparent;border: 0;color: #d9d9d9;font-size: 2rem;font-weight: 100;width: 60px;height: 60px;text-align: center;padding: 0;vertical-align: middle;align-items: center;display: flex;align-items: center;justify-content: center;transition: 200ms;border-radius: 100% !important;}
+.product-slider--arrow:hover {color: #fff;background-color: rgba(255, 255, 255, 0.1);}
+.product-slider--arrow.arrow--next {padding-left: 5px;}
+.product-slider--arrow.arrow--prev {padding-right: 5px;}
+
+
+
 @media screen and (min-width: 480px) {
 
   .box--list.product--box .box--content {padding: 0;}
