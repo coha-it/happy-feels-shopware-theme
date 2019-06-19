@@ -42,6 +42,8 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 .navigation-main .is--active .navigation--link:after { width:calc( 75% - 30px); min-width: 35px; }
 .navigation-main .is--active .navigation--link:hover:after { width: calc(100% - 30px); min-width: 35px; }
 
+/* Image Fixes */
+.emotion--mode-rows .emotion--html img {display: inline-block;}
 
 
 /* Center Logo */
@@ -176,6 +178,12 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 
   /* Circle */
 .coha.circle {position: absolute;pointer-events: none;border-radius: 100%;}
+
+
+/* Book-Payment Buttons */
+.book-payment-buttons {}
+.book-payment-buttons img {margin: 10px 10px 10px 0;box-shadow: 0px 1px 17px 0px rgba(0, 0, 0, 0.15);transition: 200ms;}
+.book-payment-buttons img:hover {transform: scale(1.05);}
 
 
 
