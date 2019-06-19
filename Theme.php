@@ -37,10 +37,13 @@ SHOPWARE_EOD;
         // Material Design JS - disabled
         // 'src/materialize-css-coha/materialize/bin/materialize.js',
 
-        'src/js/assets/js/lib/greensock/TweenMax.min.js',
-        'src/js/scrollmagic/minified/ScrollMagic.min.js',
-        'src/js/scrollmagic/minified/plugins/animation.gsap.min.js',
-        // 'src/js/scrollmagic/minified/plugins/debug.addIndicators.min.js',
+        // Scrollmagic - Disabled
+        // 'src/js/assets/js/lib/greensock/TweenMax.min.js',
+        // 'src/js/scrollmagic/minified/ScrollMagic.min.js',
+        // 'src/js/scrollmagic/minified/plugins/animation.gsap.min.js',
+        // // 'src/js/scrollmagic/minified/plugins/debug.addIndicators.min.js',
+
+        // Animation on Scroll - Disabled
         // 'src/js/aos/aos.js',
     ];
 
