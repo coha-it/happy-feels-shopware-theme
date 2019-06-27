@@ -2,7 +2,7 @@
 // ON Document Ready
 jQuery(document).ready(function ($)
 {
-	console.log('Document Ready');
+	// console.log('Document Ready');
 
 	// function playVideo() {
 	//   $('video[autoplay]').each(function(i, video) {
@@ -18,7 +18,7 @@ jQuery(document).ready(function ($)
 	$( document ).ajaxComplete(function()
 	{
 
-		console.log('Ajax Ready');
+		// console.log('Ajax Ready');
 
 		// playVideo();
 	});
