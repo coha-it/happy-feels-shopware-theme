@@ -38,9 +38,9 @@ h1 {
     //color: @text-color-dark;
 }
 
-.emotion--wrapper {
-    h1,
-    h2 {
+.emotion--wrapper h1,
+.emotion--wrapper h2,
+.red-dot {
         position: relative;
         &:before {
             content: "";
@@ -57,15 +57,20 @@ h1 {
             pointer-events: none;
             z-index: 1;
         }
-    }
-
-    &.no--red-dot {
-    	h1,
-    	h2 {
-    		&:before {
-    			display: none;
-    		}
-    	}
-    }
-
 }
+
+.no--red-dot,
+.no-red-dot,
+.noreddot  {
+    &:before {display: none;}
+}
+
+.emotion--wrapper.no--red-dot {
+	h1,
+	h2 {
+		&:before {
+			display: none;
+		}
+	}
+}
+
