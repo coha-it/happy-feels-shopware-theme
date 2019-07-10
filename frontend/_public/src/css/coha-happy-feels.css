@@ -45,6 +45,14 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 /* Image Fixes */
 .emotion--mode-rows .emotion--html img {display: inline-block;}
 
+/* Emotion Wrapper FLUID Image Fixes */
+.emotion--mode-fluid .emotion--banner .banner--content {max-height: 100%;}
+.emotion--mode-fluid .emotion--banner .banner--content img { margin: auto; }
+.emotion--mode-fluid .image-float-left  .emotion--banner .banner--content img { margin-left: 0; }
+.emotion--mode-fluid .image-float-right .emotion--banner .banner--content img { margin-right: 0; }
+
+/* HTML-Content */
+.emotion--html .html--content {display: initial;}
 
 /* Center Logo */
 .header-main {position: relative;width: 100% !important;z-index: 1000;}
@@ -63,6 +71,10 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 
 /* Mobile */
 .header-main .header-inner {height: 110px;position: relative;}
+
+/* Translate Left and Right */
+.translate-50-right {transform: translateX(50%);}
+.translate-50-left {transform: translateX(-50%);}
 
 
 /* Tablet */
@@ -178,6 +190,43 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 
   /* Circle */
 .coha.circle {position: absolute;pointer-events: none;border-radius: 100%;}
+
+
+
+
+/* Ausbildungsprogramme  */
+.ausbildungsprogramm--workshop {/*transform: scale(1.05);*/}
+.ausbildungsprogramm--workshop.empty {-webkit-user-select: none;-moz-user-select: none; -ms-user-select: none; user-select: none;}
+.ausbildungsprogramm--workshop                    > * {background: #43626a;color: #43626a;overflow: visible;display: flex;align-items: center;justify-content: center;align-self: center;}
+.ausbildungsprogramm--workshop.empty              > * {height: 100%;}
+.ausbildungsprogramm--workshop:not(.empty)        > * {height: 100%;width: 100%;}
+.ausbildungsprogramm--workshop.left-round         > * {border-radius: 100% 0 0 100%;}
+.ausbildungsprogramm--workshop.right-round        > * {border-radius: 0 100% 100% 0;}
+.ausbildungsprogramm--workshop.top-round          > * {border-radius: 100% 100% 0 0;}
+.ausbildungsprogramm--workshop.bottom-round       > * {border-radius: 0 0 100% 100%;}
+.ausbildungsprogramm--workshop:not(.empty)        > * > * {background: #fed119;border-radius: 100%;height: 100%;transition: 200ms ease-in-out;z-index: 1;display: flex;align-items: center;justify-content: center;height: 90% !important;width: 90% !important;}
+
+.ausbildungsprogramm--workshop.transparent,
+.ausbildungsprogramm--workshop.transparent        > *,
+.ausbildungsprogramm--workshop.transparent        > * > * {background: transparent;}
+
+/* Ausbildungsprogramme - Mobile / Fluid */
+.emotion--mode-fluid .ausbildungsprogramm--workshop {min-width: 130px !important;width: 15vw !important;max-width: 180px !important;display: flex;align-items: center;justify-content: center;}
+.emotion--mode-fluid .ausbildungsprogramm--workshop.empty {min-width: 125px !important;width: 10vw !important;max-width: 150px !important;margin: auto;display: flex;align-items: center;justify-content: center;margin: auto;transform-origin: center;}
+.emotion--mode-fluid .ausbildungsprogramm--workshop:not(.empty) {min-width: 125px !important;width: 10vw !important;max-width: 150px !important;min-height: 125px !important;height: 10vw !important;max-height: 150px !important;margin: auto;display: flex;align-items: center;justify-content: center;margin: auto;transform-origin: center;}
+
+/* Text */
+.ausbildungsprogramm--workshop--text {padding-right: 15px;word-break: break-word;}
+.ausbildungsprogramm--workshop--text p {font-size: 16px;margin: 0;line-height: 1.35;}
+.ausbildungsprogramm--workshop--text h4 {margin: 0;line-height: 1.35;}
+.ausbildungsprogramm--workshop--text table {border-spacing: 0;border-collapse: collapse;font-size: .8rem;width: 100%;max-width: 175px;}
+.ausbildungsprogramm--workshop--text table td {color: #d2dcde;padding: 0;}
+.ausbildungsprogramm--workshop--text table tbody tr td {background: transparent;border: unset;padding: 0px;margin: 0;}
+
+
+.ausbildungsprogramm--workshop--text--desktop {border-right-width: 2px; border-right-style: dotted; margin-top: 10px;}
+.ausbildungsprogramm--workshop--text--desktop > * {padding: 0px 10px;}
+.ausbildungsprogramm--workshop--text--desktop h4 {margin-top: 0;}
 
 
 /* Book-Payment Buttons */
