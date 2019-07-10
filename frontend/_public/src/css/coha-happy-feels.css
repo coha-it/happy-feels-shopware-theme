@@ -46,13 +46,16 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 .emotion--mode-rows .emotion--html img {display: inline-block;}
 
 /* Emotion Wrapper FLUID Image Fixes */
-.emotion--mode-fluid .emotion--banner .banner--content {max-height: 100%;}
+.emotion--mode-fluid .emotion--banner .banner--content {/* max-height: 100%; */}
 .emotion--mode-fluid .emotion--banner .banner--content img { margin: auto; }
 .emotion--mode-fluid .image-float-left  .emotion--banner .banner--content img { margin-left: 0; }
 .emotion--mode-fluid .image-float-right .emotion--banner .banner--content img { margin-right: 0; }
 
 /* HTML-Content */
 .emotion--html .html--content {display: initial;}
+
+/* Emotion-Banner 100% Radius */
+.border-radius-100 .emotion--banner {border-radius: 100%;}
 
 /* Center Logo */
 .header-main {position: relative;width: 100% !important;z-index: 1000;}
