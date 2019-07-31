@@ -292,10 +292,10 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 
 
 
-/* Team */
+/* Start: Team */
 .coha--team {}
 .coha--team .member {}
-.coha--team .member .html--content {display: flex;align-items: center;align-self: center;margin: 20px 10px 20px 20px;}
+.coha--team .member .html--content {display: flex;align-items: center;align-self: center;margin: 20px;}
 .coha--team .member .html--content > p {margin: 0;}
 .coha--team .member .html--content .profile-picture > img {border-radius: 100%;flex-shrink: 0;min-width: 120px;width: 25vw;max-width: 170px; transition: 700ms;}
 .coha--team .member .html--content .profile-text {padding: 0 0 0 20px;font-family: TisaPro, ff-tisa-web-pro;}
@@ -315,13 +315,40 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 .coha--team .member .html--content .profile-text a {color: inherit;}
 
 .coha--team .member .html--content .profile-text .labels {margin: 5px 0 0 -2px;font-family: Lato;transition-delay: 50ms;}
-.coha--team .member .html--content .profile-text .labels > span {background-color: #c8d2d6;font-size: .85rem;border-radius: 7px;padding: 3px 8px;margin: .25em 0;transition: 225ms;display: inline-block;}
+.coha--team .member .html--content .profile-text .labels > span {cursor: pointer; background-color: #c8d2d6;font-size: .85rem;border-radius: 7px;padding: 3px 8px;margin: .25em 0;transition: 225ms;display: inline-block;}
+
+.coha--team .member.highlighted .html--content .profile-text .labels > span,
 .coha--team .member .html--content .profile-text .labels:hover > span {opacity: .8; background: rgba(200, 210, 214, 0.53);}
+
+.coha--team .member .html--content .profile-text .labels > span.highlighted,
 .coha--team .member .html--content .profile-text .labels:hover > span:hover {opacity: 1; background: #e2eaec;}
 
 .coha--team .member .html--content .profile-text a {    height: 0;    overflow: hidden;    display: block;    white-space: nowrap;    transition: 200ms;}
 .coha--team .member .html--content:hover .profile-text a {    height: 1.5em;}
 
+/* Highlighting */
+.coha--team .member,
+.coha--team .member > * {transition: 200ms;}
+.coha--team .member.highlighted > * { transform :scale(1.1); }
+.coha--team .member.dehighlighted {filter: blur(2px) saturate(0);}
+.coha--team .member.dehighlighted > * {transform: scale(.9);}
+
+.coha--team .member.highlighted .html--content .profile-picture > img {box-shadow: 0px 3px 25px -7px rgba(255, 255, 255, 0.75);}
+
+
+/* Random Colors */
+.coha--team .member .html--content .profile-text .labels > span.highlighted[rnumber="1"] {background: #e4f7e1;}
+.coha--team .member .html--content .profile-text .labels > span.highlighted[rnumber="2"] {background: #fdf9e2;}
+.coha--team .member .html--content .profile-text .labels > span.highlighted[rnumber="3"] {background: #f0e7f5;}
+.coha--team .member .html--content .profile-text .labels > span.highlighted[rnumber="4"] {background: #dff2ff;}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .coha--team .member {width: 100% !important;padding-left: 0 !important;padding-right: 0;}
+  .coha--team .member .html--content {display :block; text-align: center; }
+}
+
+/* End: Team */
 
 /* Product / Article Listing */
 .listing--container {overflow: visible;overflow: inherit;}
@@ -437,7 +464,7 @@ a {color: #000;}
 @media screen and (max-width: 767px) {
 	/* Start: Sidebar */
 	.off-canvas {min-width: 17.5rem;width: 21rem;width: 75vw;max-width: 500px;}
-	.sidebar-main.off-canvas {background: rgba(242, 242, 242, 0.9);box-shadow: 0 0 25px -5px rgba(0, 0, 0, 0.43);}
+	.sidebar-main.off-canvas.is--open {background: rgba(242, 242, 242, 0.9);box-shadow: 0 0 25px -5px rgba(0, 0, 0, 0.43);}
 
 	.navigation--headline {text-transform: uppercase;text-align: center;color: rgb(131, 131, 131);letter-spacing: .1em;font-weight: 500;font-size: 14px;}
 	.sidebar--navigation .navigation--link {color: #2d2d2d;text-transform: uppercase;text-align: center;}
@@ -571,5 +598,4 @@ a {color: #000;}
 [data-aos=flip-up] {
     transform: perspective(2500px) rotateX(-90deg);
 }
-
 
