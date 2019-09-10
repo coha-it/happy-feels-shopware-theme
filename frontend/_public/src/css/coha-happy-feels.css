@@ -49,6 +49,19 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
     display: none;
 }
 
+.pt-0 {padding-top: 0 !important;}
+.pr-0 {padding-right: 0 !important;}
+.pb-0 {padding-bottom: 0 !important;}
+.pl-0 {padding-left: 0 !important;}
+
+.pt-15 {padding-top: 15px !important;}
+
+.mt-0 {margin-top: 0 !important;}
+.mr-0 {margin-right: 0 !important;}
+.mb-0 {margin-bottom: 0 !important;}
+.ml-0 {margin-left: 0 !important;}
+
+
 /* FOOTER */
 .footer-main,
 .footer-main .container {background: #c8d2d6;}
@@ -220,7 +233,7 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 
 
 /* Happy Circle: Info-Text */
-.happy-circle .info {opacity: 0; pointer-events: none; transform: scale(.5);transform-origin: 90% 70%;transition: 200ms;position: absolute;bottom: 25%;height: inherit;top: 0;margin: auto;max-width: 250px;padding: 15px 25px;align-items: center;text-align: left;vertical-align: middle;left: -25%;z-index: 9;border-radius: 30px;line-height: 1.25;display: table;color: #425d64;background: #afcdd4;font-weight: 700;}
+.happy-circle .info {opacity: 0;pointer-events: none;transform: scale(.5);transform-origin: 90% 70%;transition: 200ms;position: absolute;bottom: 25%;height: inherit;top: 0;margin: auto;max-width: 250px;padding: 15px 25px;align-items: center;text-align: left;vertical-align: middle;left: -25%;z-index: 9;border-radius: 30px;line-height: 1.25;display: table;color: #425d64;background: #afcdd4;font-weight: 700;max-height: fit-content;max-height: max-content;max-height: min-content;}
 .happy-circle.out .info {background: #AFCDD4;}
 .happy-circle.mid .info {background: #FDD02D;}
 .happy-circle.inn .info {background: #EE5220; color: #fff;}
@@ -229,7 +242,7 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 .happy-circle       .info:hover { pointer-events: all; opacity: 1;transform: scale(1);}
 
 /* Bridge */
-.happy-circle .info:after {content: "";width: 200%;position: absolute; overflow:hidden; right: -100px;background: transparent;height: 200%;z-index: 0;top: 0;}
+.happy-circle .info:after {content: "";width: 200%;position: absolute;overflow:hidden;right: -100px;background: transparent;height: 200%;z-index: 0;top: 0;}
 
   /* Circle */
 .coha.circle {position: absolute;pointer-events: none;border-radius: 100%;}
@@ -422,6 +435,17 @@ a {color: #000;}
 .videoSubtextAnim span:nth-of-type(3) {animation-delay: 15s;}
 
 
+/* Videos-Banner */
+.videos-wrapper {}
+.videos-wrapper h2 {margin-bottom: -20px !important;font-size: 20px; font-weight: 400;}
+.videos-wrapper h3 {margin-top: 20px;}
+.videos-wrapper.dark h2 {color: #fff;}
+.videos-wrapper.dark h3 {font-size: 36px; line-height: normal; font-weight: 900; color: #ffffff;}
+
+.video-hidden {height: 0;transform: scale(0.5); opacity: 0; transition: 400ms; transform-origin: 50% 0%;}
+.video-hidden.visible {height: auto; transform: scale(1); opacity: 1;}
+.video-hidden.btn {transition: 0ms;}
+
 /* BLOG */
 .blog--listing .panel.blog--box {border: unset;box-shadow: 0px 4px 18px -2px rgba(0, 0, 0, 0.10980392156862745);}
 .blog--content {max-width: 1200px;margin-left: auto;margin-right: auto;}
@@ -464,23 +488,23 @@ a {color: #000;}
 
 
 @media screen and (max-width: 767px) {
-	/* Start: Sidebar */
-	.off-canvas {min-width: 17.5rem;width: 21rem;width: 75vw;max-width: 500px;}
-	.sidebar-main.off-canvas.is--open {background: rgba(242, 242, 242, 0.9);box-shadow: 0 0 25px -5px rgba(0, 0, 0, 0.43);}
+    /* Start: Sidebar */
+    .off-canvas {min-width: 17.5rem;width: 21rem;width: 75vw;max-width: 500px;}
+    .sidebar-main.off-canvas.is--open {background: rgba(242, 242, 242, 0.9);box-shadow: 0 0 25px -5px rgba(0, 0, 0, 0.43);}
 
-	.navigation--headline {text-transform: uppercase;text-align: center;color: rgb(131, 131, 131);letter-spacing: .1em;font-weight: 500;font-size: 14px;}
-	.sidebar--navigation .navigation--link {color: #2d2d2d;text-transform: uppercase;text-align: center;}
-	.navigation--smartphone .entry--close-off-canvas {background: transparent;text-align: center;text-transform: uppercase;letter-spacing: .1em;}
-	.navigation--smartphone .entry--close-off-canvas .icon--arrow-right { position: absolute; right: 0; top: 0; margin: auto; bottom: 0; display: inline-block; height: 12px;display: none;}
-	.navigation--smartphone .entry--close-off-canvas .navigation--link {position: relative;padding-top: 20px;padding-bottom: 20px;color: #393939;text-shadow: 7px 13px 0 #f4f4f4;}
+    .navigation--headline {text-transform: uppercase;text-align: center;color: rgb(131, 131, 131);letter-spacing: .1em;font-weight: 500;font-size: 14px;}
+    .sidebar--navigation .navigation--link {color: #2d2d2d;text-transform: uppercase;text-align: center;}
+    .navigation--smartphone .entry--close-off-canvas {background: transparent;text-align: center;text-transform: uppercase;letter-spacing: .1em;}
+    .navigation--smartphone .entry--close-off-canvas .icon--arrow-right { position: absolute; right: 0; top: 0; margin: auto; bottom: 0; display: inline-block; height: 12px;display: none;}
+    .navigation--smartphone .entry--close-off-canvas .navigation--link {position: relative;padding-top: 20px;padding-bottom: 20px;color: #393939;text-shadow: 7px 13px 0 #f4f4f4;}
 
-	.offcanvas--overlay {top: 75px;width: 100%;background: transparent;}
-	.off-canvas .link--go-main {height: 60px;background: transparent;display: none;}
-	.offcanvas--overlay .overlay--headline {border: 0;}
-	.offcanvas--overlay .overlay--category {text-align: center;text-transform: uppercase;letter-spacing: .1em;font-weight: 400;}
-	.offcanvas--overlay .is--icon-left {position: absolute;left: 10px;}
-	.sidebar--navigation .navigation--link .is--icon-right {position: absolute;right: 15px;}
-	/* End: Sidebar */
+    .offcanvas--overlay {top: 75px;width: 100%;background: transparent;}
+    .off-canvas .link--go-main {height: 60px;background: transparent;display: none;}
+    .offcanvas--overlay .overlay--headline {border: 0;}
+    .offcanvas--overlay .overlay--category {text-align: center;text-transform: uppercase;letter-spacing: .1em;font-weight: 400;}
+    .offcanvas--overlay .is--icon-left {position: absolute;left: 10px;}
+    .sidebar--navigation .navigation--link .is--icon-right {position: absolute;right: 15px;}
+    /* End: Sidebar */
 }
 
 
