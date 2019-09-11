@@ -30,6 +30,10 @@ SHOPWARE_EOD;
         
         // Materialize CSS - disabled
         // 'src/materialize-css-coha/materialize/bin/materialize.css',
+
+        // OWL
+        '../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
+        '../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css'
     ];
 
     protected $javascript = [
@@ -45,6 +49,9 @@ SHOPWARE_EOD;
 
         // Animation on Scroll - Disabled
         // 'src/js/aos/aos.js',
+
+        // OWL
+        '../../node_modules/owl.carousel/dist/owl.carousel.js'
     ];
 
     public function createConfig(Form\Container\TabContainer $container)
