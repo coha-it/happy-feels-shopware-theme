@@ -17,12 +17,12 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 
 /* Select */
 .select-field select,
-.js--fancy-select select {background-image: unset;border-color: #c1c1c1;border-bottom-width: 2px;font-size: 17px;margin-left: 2px;}
+.js--fancy-select select {background-image: unset;font-size: 17px;}
 .select-field:after,
 .js--fancy-select:after {border: unset;}
 
 
-.btn {text-transform: uppercase;letter-spacing: .02em;font-weight: 500;border-radius: 0;}
+.btn {text-transform: uppercase;letter-spacing: .03em;font-weight: 600;border-radius: 0;padding: 0.125rem 1.5rem;}
 .is--primary {background: #e1c832;transition: 200ms;}
 .is--primary:hover {background: #eed64b;}
 
@@ -158,6 +158,13 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 
     /* SIDEBAR FILTER */
     .listing--sidebar .sidebar-filter .action--filter-options {background: transparent; }
+}
+@media screen and (min-width: 78.75em) {
+
+    .navigation-main > .container > .navigation--list-wrapper .navigation--list.container > .navigation--entry:last-of-type {margin-right: 3%;}
+
+    .is--ctl-error li.navigation--entry.is--home {margin-right: 300px;}
+    .is--ctl-error li.navigation--entry:last-of-type {margin-right: 75px;}
 }
 
 @media screen and (max-width: 767px) {
