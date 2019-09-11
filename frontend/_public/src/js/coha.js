@@ -40,7 +40,9 @@ var coha = {
         labels: [],
         highlight: function() {},
         dehighlight: function() {},
-    }
+    },
+
+    initSliders: function() {},
 
 };
 var debug = coha._debug;
@@ -156,6 +158,15 @@ coha.playVideo = function() {
     });
 };
 
+
+coha.initSliders = function() {
+
+}
+
+
+
+
+
 // On Document Ready
 jQuery(document).ready(function ($) {
     'use strict';
@@ -168,4 +179,10 @@ jQuery(document).ready(function ($) {
         // Initialize Coha Multiple Times
         coha._initMultipleTimes();
     });
+});
+
+
+// On Resize Document
+$( window ).resize(function() {
+    // coha.initSliders();
 });
