@@ -43,6 +43,7 @@ var coha = {
     },
 
     initSliders: function() {},
+    fInitAosClasses: function() {},
 
 };
 var debug = coha._debug;
@@ -55,6 +56,9 @@ coha._initOnce = function() {
 coha._initMultipleTimes = function() {
     // Initialize Members
     coha._initMembers();
+
+    // Initialize AosClasses
+    coha.fInitAosClasses();
 };
 
 // Init all Members
@@ -64,6 +68,21 @@ coha._initMembers = function() {
 
     // If team is uninitialized and if Members Exist
     if( !initialized(c.team) && exists($('.coha--team .member')) ) {
+
+        // Init / Split Labels first - Build Tags on Labels
+        $('.coha--team .member .labels').each(function(i, element) {
+            var oLabels = $(element);
+            var sTexts = oLabels.text();
+            var aTexts = sTexts.split(', ');
+
+            oLabels.empty();
+            for (var j = 0; j < aTexts.length; j++) {
+                var sLabel = aTexts[j];
+                oLabels.append('<span>'+sLabel+'</span>');
+            }
+
+        });
+
         // Define Vars
         c.team.members = $('.coha--team .member');
         c.team.labels = $('.coha--team .member .labels span');
@@ -117,10 +136,6 @@ coha._initMembers = function() {
 
         // initialize
         c.team.initialized = true;
-        debug('init: yes');
-
-    } else {
-        debug('init: no');
     }
 };
 
@@ -164,7 +179,28 @@ coha.initSliders = function() {
 }
 
 
+coha.fInitAosClasses = function() {
+    var prefix = 'add--';
+    //  add--data-aos_fadeUp add--data-aos-duration_2000
+    jQuery('*[class*="add--data"]').each(function(i, e) {
+        var oElement = jQuery(e);
+        var sClasses = oElement.attr('class');
+        var aClasses = sClasses.match(/add--.*?\ /g);
 
+        // Go Through Attributes
+        for (var i = 0; i < aClasses.length; i++) {
+            var sClass = aClasses[i];
+            var aAttributes = sClass.split(/_/);
+            var sName = aAttributes[0].replace(/ /g,'').replace(prefix, '');
+            var sValue = aAttributes[1].replace(/ /g,'').replace(prefix, '');
+            // Add Attribute with Value
+            oElement.attr(sName, sValue);
+            // Remove Class
+            oElement.removeClass(sClass);
+        }
+    });
+
+}
 
 
 // On Document Ready

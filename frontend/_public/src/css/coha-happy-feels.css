@@ -356,7 +356,7 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 .coha--team .member .html--content .profile-text a {color: inherit;}
 
 .coha--team .member .html--content .profile-text .labels {margin: 5px 0 0 -2px;font-family: Lato;transition-delay: 50ms;}
-.coha--team .member .html--content .profile-text .labels > span {cursor: pointer; background-color: #c8d2d6;font-size: .85rem;border-radius: 7px;padding: 3px 8px;margin: .25em 0;transition: 225ms;display: inline-block;}
+.coha--team .member .html--content .profile-text .labels > span {cursor: pointer;background-color: #c8d2d6;font-size: .85rem;border-radius: 7px;padding: 3px 8px;margin: .25em .5em .25em 0;transition: 225ms;display: inline-block;}
 
 .coha--team .member.highlighted .html--content .profile-text .labels > span,
 .coha--team .member .html--content .profile-text .labels:hover > span {opacity: .8; background: rgba(200, 210, 214, 0.53);}
