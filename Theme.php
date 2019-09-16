@@ -34,8 +34,6 @@ SHOPWARE_EOD;
         // OWL
         '../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
         '../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css'
-
-        // jQuery on Scroll
     ];
 
     protected $javascript = [
@@ -53,7 +51,10 @@ SHOPWARE_EOD;
         // 'src/js/aos/aos.js',
 
         // OWL
-        '../../node_modules/owl.carousel/dist/owl.carousel.js'
+        '../../node_modules/owl.carousel/dist/owl.carousel.js',
+
+        // jQuery on Scroll
+        'src/assets/jquery.stickOnScroll/src/jquery.stickOnScroll.js',
     ];
 
     public function createConfig(Form\Container\TabContainer $container)
