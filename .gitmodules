@@ -1,6 +1,3 @@
 [submodule "frontend/_public/src/assets/materialize-css-coha/materialize"]
 	path = frontend/_public/src/assets/materialize-css-coha/materialize
 	url = git@github.com:coha-it/CohaMaterializeCssSubmoduleTheme.git
-[submodule "frontend/_public/src/assets/jquery.stickOnScroll"]
-	path = frontend/_public/src/assets/jquery.stickOnScroll
-	url = https://github.com/purtuga/jquery.stickOnScroll.git

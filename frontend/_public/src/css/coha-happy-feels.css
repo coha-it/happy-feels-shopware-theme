@@ -667,6 +667,7 @@ a {color: #000;}
 
 
 
+
 /* AOS Fixes */
 [data-aos=flip-up] {
     transform: perspective(2500px) rotateX(-90deg);

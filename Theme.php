@@ -52,9 +52,6 @@ SHOPWARE_EOD;
 
         // OWL
         '../../node_modules/owl.carousel/dist/owl.carousel.js',
-
-        // jQuery on Scroll
-        'src/assets/jquery.stickOnScroll/src/jquery.stickOnScroll.js',
     ];
 
     public function createConfig(Form\Container\TabContainer $container)

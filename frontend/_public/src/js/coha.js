@@ -43,13 +43,25 @@ var coha = {
     },
 
     initSliders: function() {},
-    fInitAosClasses: function() {},
+    _initAosClasses: function() {},
+    _initPins: function() {},
 
 };
 var debug = coha._debug;
 
 // Initialize Once
 coha._initOnce = function() {
+
+
+    // On Screen Resize
+    $( window ).resize(function() {
+        coha.onScreenResize();
+    });
+};
+
+// When Screen Resize
+coha.onScreenResize = function() {
+    // coha._initPins();
 };
 
 // Initialize Multiple Times
@@ -58,7 +70,15 @@ coha._initMultipleTimes = function() {
     coha._initMembers();
 
     // Initialize AosClasses
-    coha.fInitAosClasses();
+    coha._initAosClasses();
+
+    // Initialize Pins
+    // coha._initPins();
+};
+
+// Init Pins
+coha._initPins = function() {
+    
 };
 
 // Init all Members
@@ -179,7 +199,7 @@ coha.initSliders = function() {
 }
 
 
-coha.fInitAosClasses = function() {
+coha._initAosClasses = function() {
     var prefix = 'add--';
     //  add--data-aos_fadeUp add--data-aos-duration_2000
     jQuery('*[class*="add--data"]').each(function(i, e) {
@@ -215,10 +235,4 @@ jQuery(document).ready(function ($) {
         // Initialize Coha Multiple Times
         coha._initMultipleTimes();
     });
-});
-
-
-// On Resize Document
-$( window ).resize(function() {
-    // coha.initSliders();
 });
