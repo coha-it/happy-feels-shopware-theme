@@ -29,17 +29,19 @@ SHOPWARE_EOD;
         
         
         // Materialize CSS - disabled
-        // 'src/materialize-css-coha/materialize/bin/materialize.css',
+        // 'src/assets/materialize-css-coha/materialize/bin/materialize.css',
 
         // OWL
         '../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
         '../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css'
+
+        // jQuery on Scroll
     ];
 
     protected $javascript = [
 
         // Material Design JS - disabled
-        // 'src/materialize-css-coha/materialize/bin/materialize.js',
+        // 'src/assets/materialize-css-coha/materialize/bin/materialize.js',
 
         // Scrollmagic - Disabled
         // 'src/js/assets/js/lib/greensock/TweenMax.min.js',
