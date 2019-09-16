@@ -22,7 +22,7 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 .js--fancy-select:after {border: unset;}
 
 
-.btn {text-transform: uppercase;letter-spacing: .03em;font-weight: 600;border-radius: 0;padding: 0.125rem 1.5rem;}
+.btn {text-transform: uppercase;letter-spacing: .03em;font-weight: bold;border-radius: 4px;padding: 0.125rem 1.5rem;}
 .is--primary {background: #e1c832;transition: 200ms;}
 .is--primary:hover {background: #eed64b;}
 
@@ -65,6 +65,15 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 .mb-0 {margin-bottom: 0 !important;}
 .ml-0 {margin-left: 0 !important;}
 
+/**/
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 /* FOOTER */
 .footer-main,
@@ -475,8 +484,10 @@ a {color: #000;}
 .videos-wrapper {}
 .videos-wrapper h2 {margin-bottom: -20px !important;font-size: 20px; font-weight: 400;}
 .videos-wrapper h3 {margin-top: 20px;}
+.videos-wrapper .html--content {color: #fff;}
 .videos-wrapper.dark h2 {color: #fff;}
-.videos-wrapper.dark h3 {font-size: 36px; line-height: normal; font-weight: 900; color: #ffffff;}
+.videos-wrapper.dark h3 {font-size: 36px; line-height: normal; font-weight: 900;color: #fff; line-height: 1.15; }
+.videos-wrapper.dark .html--content p {font-family: ff-tisa-web-pro, TisaPro, Tisa; color: #ccc; font-weight: 500;letter-spacing: .025em;font-size: 1.1em;}
 
 .video-hidden {height: 0;transform: scale(0.5); opacity: 0; transition: 400ms; transform-origin: 50% 0%;}
 .video-hidden.visible {height: auto; transform: scale(1); opacity: 1;}
