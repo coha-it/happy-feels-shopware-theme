@@ -1,3 +1,9 @@
 [submodule "frontend/_public/src/materialize-css-coha/materialize"]
 	path = frontend/_public/src/materialize-css-coha/materialize
 	url = https://github.com/Dogfalo/materialize.git
+[submodule "frontend/_public/src/jquery.stickOnScroll"]
+	path = frontend/_public/src/jquery.stickOnScroll
+	url = https://github.com/purtuga/jquery.stickOnScroll.git
+[submodule "frontend/_public/src/assets/jquery.stickOnScroll"]
+	path = frontend/_public/src/assets/jquery.stickOnScroll
+	url = https://github.com/purtuga/jquery.stickOnScroll.git
