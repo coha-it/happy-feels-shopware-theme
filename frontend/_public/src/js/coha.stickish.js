@@ -61,7 +61,7 @@ var STKSH = {
                 if(typeof nextSticky[0] != 'undefined') {
                     nextPos = $.data(nextSticky[0], 'pos') - currSticky.outerHeight();
                     if (nextSticky.length > 0 && currSticky.offset().top >= nextPos) {
-                        currSticky.addClass('absolute').css('top', nextPos);
+                        currSticky.addClass('absolute').css('top', nextPos - pos);
                     }
                 }
             } else {
