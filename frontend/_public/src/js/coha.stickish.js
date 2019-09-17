@@ -11,8 +11,8 @@ var STKSH = {
 
             currSticky
                 .addClass('stickish-item')
-                .unwrap('.sticky-wrapper')
-                .wrap('<div class="sticky-wrapper" />')
+                .unwrap('.stickish-wrapper')
+                .wrap('<div class="stickish-wrapper" />')
                 .parent()
                 .height(currSticky.outerHeight());
 

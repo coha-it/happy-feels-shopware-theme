@@ -77,7 +77,7 @@ coha._initMultipleTimes = function() {
 
 // Init Pins
 coha._initStickish = function() {
-    $('.sticky').stickish();
+    $('.stickish').stickish();
 };
 
 // Init all Members
