@@ -44,7 +44,7 @@ var coha = {
 
     initSliders: function() {},
     _initAosClasses: function() {},
-    _initPins: function() {},
+    _initStickish: function() {},
 
 };
 var debug = coha._debug;
@@ -61,7 +61,6 @@ coha._initOnce = function() {
 
 // When Screen Resize
 coha.onScreenResize = function() {
-    // coha._initPins();
 };
 
 // Initialize Multiple Times
@@ -73,12 +72,12 @@ coha._initMultipleTimes = function() {
     coha._initAosClasses();
 
     // Initialize Pins
-    // coha._initPins();
+    coha._initStickish();
 };
 
 // Init Pins
-coha._initPins = function() {
-    
+coha._initStickish = function() {
+    $('.sticky').stickish();
 };
 
 // Init all Members

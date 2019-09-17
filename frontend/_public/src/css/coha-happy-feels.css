@@ -561,9 +561,30 @@ a {color: #000;}
 }
 
 
+/* Pinning / Stickish / Sticky */
+.sticky-wrapper {position: relative;}
+.sticky-wrapper * {margin: 0;}
+
+.stickish-item {
+  position: relative;
+  z-index: 1;
+}
+
+.stickish-item.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.stickish-item.fixed.absolute {
+    position: absolute;
+    display: none;
+}
+
+
+
 
 .is--ctl-checkout .header-main .header-inner {height: auto !important;}
-
 
 @keyframes videoSubtextAnim {
   0%  {opacity: 0;transform: scale(1);}
