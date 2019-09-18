@@ -45,6 +45,7 @@ var coha = {
     initSliders: function() {},
     _initAosClasses: function() {},
     _initStickish: function() {},
+    _initTextOverflow: function() {},
 
 };
 var debug = coha._debug;
@@ -56,6 +57,17 @@ coha._initOnce = function() {
     // On Screen Resize
     $( window ).resize(function() {
         coha.onScreenResize();
+    });
+
+    // On Click Text Overflow
+    $(document).on('click', '.text-overflow + .trigger', function(event) {
+        $(event.currentTarget).prev('.text-overflow').toggleClass('cutted');
+        $( window ).resize();
+    });
+
+    $(document).on('click', '.text-overflow.cutted', function(event) {
+        $(event.currentTarget).prev('.text-overflow').removeClass('cutted');
+        $( window ).resize();
     });
 };
 
@@ -73,11 +85,24 @@ coha._initMultipleTimes = function() {
 
     // Initialize Pins
     coha._initStickish();
+
+    // Initialize Text-Overflow
+    coha._initTextOverflow();
 };
 
 // Init Pins
 coha._initStickish = function() {
     $('.stickish').stickish();
+};
+
+coha._initTextOverflow = function() {
+    $('.text-overflow:not(.init)').each(function(i) {
+        var e = $(this);
+
+        e.after('<span class="trigger"></span>');
+
+        e.addClass('init cutted');
+    });
 };
 
 // Init all Members

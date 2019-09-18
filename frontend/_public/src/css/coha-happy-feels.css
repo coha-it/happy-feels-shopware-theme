@@ -616,6 +616,46 @@ a {color: #000;}
 .produkt-welt--banner-wrapper.mobile .html--content {padding: 25px;}
 
 
+/* Produkt Welt */
+.produkt-welt {}
+.produkt-welt.inverted {color: #fff;}
+
+.produkt-welt.ausbildung {max-width: 1700px;}
+
+
+.produkt-welt.orientierungsangebote{max-width: 1700px;}
+
+.produkt-welt.ausbildung.offene {}
+
+.produkt-welt.ausbildung.inhouse,
+.produkt-welt.ausbildung.inhouse h2,
+.produkt-welt.ausbildung.inhouse h3,
+.produkt-welt.ausbildung.inhouse h4 {color: #fff;}
+
+
+/* Text Overflow */
+.text-overflow {}
+.text-overflow.cutted {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-overflow + .trigger {
+    margin-top: -20px;
+    display: block;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .05em;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.text-overflow + .trigger:after {content:"Weniger"; cursor: pointer;}
+.text-overflow.cutted + .trigger:after {content:"Mehr erfahren";}
 
 
 .is--ctl-checkout .header-main .header-inner {height: auto !important;}
