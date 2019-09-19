@@ -9,10 +9,15 @@ var STKSH = {
         return this.each(function(i) {
             var currSticky = $(this);
 
-            currSticky
-                .addClass('stickish-item')
-                .unwrap('.stickish-wrapper')
-                .wrap('<div class="stickish-wrapper" />')
+            // If not init
+            if(!currSticky.hasClass('init')) {
+                currSticky
+                    .addClass('stickish-item init')
+                    .wrapInner('<div class="stickish-inner" />')
+                    .wrap('<div class="stickish-wrapper" />')
+            }
+
+            currSticky                
                 .parent()
                 .height(currSticky.outerHeight());
 

@@ -42,7 +42,16 @@ var coha = {
         dehighlight: function() {},
     },
 
-    initSliders: function() {},
+    // Booleans
+    bInitOnceAfterAjax: true,
+
+    // Init Functions
+    _initOnce: function() {},
+    _initOnceAfterAjax: function() {},
+    _initMultipleTimes: function() {},
+
+    // More Initializing Functions
+    _initSliders: function() {},
     _initAosClasses: function() {},
     _initStickish: function() {},
     _initTextOverflow: function() {},
@@ -61,19 +70,24 @@ coha._initOnce = function() {
 
     // On Click Text Overflow
     $(document).on('click', '.text-overflow + .trigger', function(event) {
-        $(event.currentTarget).prev('.text-overflow').toggleClass('cutted');
-        $( window ).resize();
+        coha.textOverflow(event.currentTarget);        
     });
 
     $(document).on('click', '.text-overflow.cutted', function(event) {
-        $(event.currentTarget).prev('.text-overflow').removeClass('cutted');
-        $( window ).resize();
+        coha.textOverflow(event.currentTarget);
+    });
+
+    $(document).on('click', '.ausbildung--subinfo.trigger', function(event) {
+        $('.ausbildung--subinfo').toggleClass('visible');
+        $(window).resize();
     });
 };
 
-// When Screen Resize
-coha.onScreenResize = function() {
-};
+coha._initOnceAfterAjax = function() {
+    // Functions
+    coha.bInitOnceAfterAjax = false;
+}
+
 
 // Initialize Multiple Times
 coha._initMultipleTimes = function() {
@@ -88,6 +102,28 @@ coha._initMultipleTimes = function() {
 
     // Initialize Text-Overflow
     coha._initTextOverflow();
+
+    // Initalize Hash in URL
+    coha._initHashInUrl();
+
+};
+
+coha._initHashInUrl = function() {
+    if(window.location.hash) {
+        var oGoal = $(window.location.hash);
+        var sClass = 'scrolledTo';
+
+        if(oGoal.length > 0 && !oGoal.hasClass(sClass)) {
+
+            oGoal.addClass(sClass);
+
+            $('html, body').animate({
+                scrollTop: oGoal.offset().top
+            }, 750);
+
+        }
+
+    }
 };
 
 // Init Pins
@@ -95,14 +131,27 @@ coha._initStickish = function() {
     $('.stickish').stickish();
 };
 
+coha.textOverflow = function(e) {
+    var trigger = $(e);
+    var textOverflow = trigger.prev('.text-overflow');
+
+    textOverflow.toggleClass('cutted');
+
+    $( window ).resize();
+};
+
+
 coha._initTextOverflow = function() {
     $('.text-overflow:not(.init)').each(function(i) {
-        var e = $(this);
+        var textOverflow = $(this);
+        var trigger = textOverflow.after('<div class="trigger"><span>Mehr erfahren</span><span>Weniger</span></div>');
 
-        e.after('<span class="trigger"></span>');
-
-        e.addClass('init cutted');
+        textOverflow.addClass('init cutted');
     });
+};
+
+// When Screen Resize
+coha.onScreenResize = function() {
 };
 
 // Init all Members
@@ -218,7 +267,7 @@ coha.playVideo = function() {
 };
 
 
-coha.initSliders = function() {
+coha._initSliders = function() {
 
 }
 
@@ -258,5 +307,8 @@ jQuery(document).ready(function ($) {
     $(document).ajaxComplete(function() {
         // Initialize Coha Multiple Times
         coha._initMultipleTimes();
+
+        // 
+        if(coha.bInitOnceAfterAjax) coha._initOnceAfterAjax();
     });
 });
