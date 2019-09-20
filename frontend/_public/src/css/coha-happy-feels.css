@@ -1,6 +1,6 @@
 /* Selection-Colour */
-::-moz-selection {      /* background: #efd84d;*/ background: #afcdd4; color: #fff; }
-::selection {           /* background: #efd84d;*/ background: #afcdd4; color: #fff; }
+::-moz-selection {      /* background: #efd84d;*/ background: #afcdd4;  }
+::selection {           /* background: #efd84d;*/ background: #afcdd4;  }
 
 .inverter ::-moz-selection {      background: #efd84d; color: #fff; }
 .inverted ::selection {           background: #efd84d; color: #fff; }
@@ -48,6 +48,14 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 .noreddot h3:before {
     display: none;
 }
+
+/* Red Dot - Unmarkable */
+.emotion--wrapper h1:before,
+.emotion--wrapper h2:before,
+.red-dot:before,
+.reddot:before,
+i.red-dot-dot, 
+em.red-dot-dot {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
 
 .height-0 {height: 0 !important;}
 
@@ -331,7 +339,7 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 .wachstumsfeld--video-text .html--content {display: flex; align-self: center; justify-content: center;}
 
 /* 6 Wirksamkeitsslider */
-.coha--wirksamkeits-slider {background-color: #fff;padding: 0px !important;margin: 0 !important; transition: 200ms;}
+.coha--wirksamkeits-slider {background-color: #f9f9f9;padding: 0px !important;margin: 0 !important; transition: 200ms;}
 .coha--wirksamkeits-slider .owl-carousel {padding-top: 10px;}
 .coha--wirksamkeits-slider .owl-item {transition: 200ms;}
 .coha--wirksamkeits-slider .owl-item .item {padding: 15px;}
@@ -341,13 +349,15 @@ input[type="tel"] {box-shadow: unset;background-color: #fff;box-sizing: border-b
 
 .coha--wirksamkeits-slider .owl-nav.disabled+.owl-dots {margin-top: 0;}
 
-.coha--wirksamkeits-slider:hover {background-color: transparent;}
+/*.coha--wirksamkeits-slider:hover {background-color: transparent;}
 .coha--wirksamkeits-slider:hover .owl-item {opacity: .9;}
-.coha--wirksamkeits-slider:hover .owl-item:hover {background-color: #fff; transform: scale(1.05); opacity: 1;}
+.coha--wirksamkeits-slider:hover .owl-item:hover {background-color: #fff; transform: scale(1.05); opacity: 1;}*/
 
 /* Referenzslider */
 .coha--referenzen-slider {padding: 0 !important;}
-.coha--referenzen-slider .emotion--manufacturer {max-height: 200px;}
+.coha--referenzen-slider .emotion--manufacturer {max-height: 175px;}
+.coha--referenzen-slider .emotion--manufacturer .manufacturer--content {padding-top: 0;padding-bottom: 0;}
+.coha--referenzen-slider .emotion--manufacturer .manufacturer--item {padding-top: 0;padding-bottom: 0;}
 
 /* Start: Team */
 .coha--team {}

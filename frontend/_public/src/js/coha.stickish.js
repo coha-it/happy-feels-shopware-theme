@@ -28,8 +28,8 @@ var STKSH = {
             $(window).resize(function() {
                 STKSH._onResize(currSticky);
             });
-            $(window).resize();
         });
+        $(window).resize();
     },
 
     _onResize: function(currSticky) {
