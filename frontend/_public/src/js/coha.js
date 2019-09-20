@@ -62,7 +62,6 @@ var debug = coha._debug;
 // Initialize Once
 coha._initOnce = function() {
 
-
     // On Screen Resize
     $( window ).resize(function() {
         coha.onScreenResize();
@@ -81,13 +80,14 @@ coha._initOnce = function() {
         $('.ausbildung--subinfo').toggleClass('visible');
         $(window).resize();
     });
+
+    coha._initMultipleTimes();
 };
 
 coha._initOnceAfterAjax = function() {
     // Functions
     coha.bInitOnceAfterAjax = false;
-}
-
+};
 
 // Initialize Multiple Times
 coha._initMultipleTimes = function() {
