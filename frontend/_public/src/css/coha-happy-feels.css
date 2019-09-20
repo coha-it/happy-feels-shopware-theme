@@ -102,6 +102,23 @@ em.red-dot-dot {-webkit-user-select: none;-moz-user-select: none;-ms-user-select
 
 .valign-wrapper {display: flex;align-items: center;/* align-self: center; */justify-content: center;}
 
+/* Social Media Footer */
+.coha--social-media-wrapper {text-align: center;}
+.coha--social-media-wrapper .social-media {display: inline-block;padding: 15px 35px;color: inherit;transition: 200ms;width: 160px;text-align: center;}
+.coha--social-media-wrapper .social-media .icon {font-size: 75px;}
+.coha--social-media-wrapper .social-media .icon.shopware {font-size: 50px;line-height: 1.83;}
+.coha--social-media-wrapper .social-media .text {font-size: 1.35em; display: inline-block;transform: scale(0); transform-origin: 50% 25%; transition: 200ms;}
+
+.coha--social-media-wrapper .social-media:hover {color: #30454b;}
+.coha--social-media-wrapper .social-media:hover .text {transform: scale(1);}
+
+
+/*  */
+@media (hover: none) {
+  .coha--social-media-wrapper .social-media .text {
+    transform: scale(1);
+  }
+}
 
 /* Fullscreen-video-emotion */
 .fullscreen-video--emotion {min-height: 500px; height: 100vh; min-width: 320px;}
