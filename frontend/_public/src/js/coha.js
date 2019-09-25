@@ -61,7 +61,6 @@ var debug = coha._debug;
 // Initialize Once
 coha._initOnce = function() {
 
-
     // On Screen Resize
     $( window ).resize(function() {
         coha.onScreenResize();
@@ -81,15 +80,18 @@ coha._initOnce = function() {
         coha.windowResize();
     });
 
+<<<<<<< HEAD
     // Init Members Once
     coha._initMembersOnce();
+=======
+    coha._initMultipleTimes();
+>>>>>>> 50c2b9d90b03792bb18d92c90e0ae5c5737f6d46
 };
 
 coha._initOnceAfterAjax = function() {
     // Functions
     coha.bInitOnceAfterAjax = false;
-}
-
+};
 
 // Initialize Multiple Times
 coha._initMultipleTimes = function() {
