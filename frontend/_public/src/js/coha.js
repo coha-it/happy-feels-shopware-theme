@@ -80,12 +80,11 @@ coha._initOnce = function() {
         coha.windowResize();
     });
 
-<<<<<<< HEAD
     // Init Members Once
     coha._initMembersOnce();
-=======
+
+    // Init Multiple Times
     coha._initMultipleTimes();
->>>>>>> 50c2b9d90b03792bb18d92c90e0ae5c5737f6d46
 };
 
 coha._initOnceAfterAjax = function() {
