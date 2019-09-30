@@ -1,3 +1,6 @@
 [submodule "frontend/_public/src/assets/materialize-css-coha/materialize"]
 	path = frontend/_public/src/assets/materialize-css-coha/materialize
 	url = git@github.com:coha-it/CohaMaterializeCssSubmoduleTheme.git
+[submodule "frontend/_public/src/assets/jquery.pan/jquery.pan"]
+	path = frontend/_public/src/assets/jquery.pan/jquery.pan
+	url = https://github.com/saplumbaga/jquery.pan
