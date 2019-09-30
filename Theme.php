@@ -59,6 +59,9 @@ SHOPWARE_EOD;
 	// jQuery PanZoom
 	'src/assets/jquery.pan/jquery.pan/dist/jquery.pan.min.js',
 
+	// jQuery Circle Progress
+	'../../node_modules/jquery-circle-progress/dist/circle-progress.min.js',
+
         // Coha Stickish
         'src/js/coha.stickish.js',
     ];

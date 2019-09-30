@@ -116,6 +116,12 @@ coha._initMultipleTimes = function() {
     // Init Pan Zoom
     coha._initPanZoom();
 
+    // Init Circle Progress
+    coha._initProgressCircles();
+
+    // Init ScrollMagic Elements
+    coha._initScrollMagicElements();
+
     // Fake Window Resize
     coha.windowResize();
 };
@@ -125,13 +131,124 @@ coha.windowResize = function() {
     $( window ).resize();
 };
 
+coha._initScrollMagicElements = function() {
+
+    var oCph = $('.coha--plant-hand')
+    var sIc = 'init--scrollmagic';
+
+    if( !oCph.hasClass(sIc) ){
+        
+        oCph
+            .css('transform-origin', '0 0')
+            .find('.emotion--banner').css('margin-left','-5px');
+            
+        var tween0 = TweenMax.from('.coha--plant-hand', 1, {transform: "translate(-5%) scale(.9)", opacity: 1});
+        var scene0 = new ScrollMagic.Scene(
+            {
+                triggerElement: '.coha--plant-hand',
+                duration: '35%', 
+                /*triggerHook: 0.95*/
+            })
+            .setTween(tween0)
+            .addTo(CohaSmc);
+
+        oCph.addClass(sIc);
+    }
+
+};
+
+coha._initProgressCircles = function() {
+    if($('.progress-circle').length) {
+        $('.progress-circle').each(function(i, c) {
+            coha._initProgressCircle($(c));
+        })
+    }
+};
+
+coha.checkProgressCircles = function(y, yh) {
+    $('.progress-circle').each(function(i, elem) {
+        var c = $(elem)
+        var cy = c.offset().top;
+        var cyh = cy + c.outerHeight();
+        
+        // They are visible!
+        if(yh < cy || cyh < y) {
+            // Unvisible Circle
+            coha._terminateProgressCircle(c);
+        } else {
+            // Visible Circle!
+            coha._initProgressCircle(c);          
+        }
+    });
+};
+
+coha._initProgressCircle = function(elem) {
+    if(!elem.hasClass('circle-init')) {
+        elem.circleProgress({
+            startAngle: -Math.PI / 4 * 2,
+            size: 500,
+            thickness: 40
+        });
+
+        if(elem.hasClass('a')) {
+            elem.circleProgress({
+                fill: {color: '#efd84d'},
+                emptyFill: '#A9ACB0',
+                animation: { duration: 1500, easing: "circleProgressEasing" }
+            }).on('circle-animation-progress', function(event, progress, stepValue) {
+                $(this).find('p').html(Math.round( ( (stepValue*100) ))  + '<i>%</i>');
+            });
+        }
+
+        if(elem.hasClass('b')) {
+            elem.circleProgress({
+                // fill: {color: '#cab017'},
+                fill: {gradient: [['#cab017', .5], ['#efd84d', .5]], gradientAngle: Math.PI},
+                // fill: {gradient: [['#ff0000', .5], ['#00ff00', .5]], gradientAngle: Math.PI},
+                emptyFill: '#A9ACB0',
+                animation: { duration: 1400, easing: "circleProgressEasing" },
+            }).on('circle-animation-progress', function(event, progress, stepValue) {
+                $(this).find('p').html('+'+Math.round( ( (stepValue*100) ))  + '<i>%</i>');
+            });
+        }
+
+        if(elem.hasClass('c')) {
+            elem.circleProgress({
+                fill: {color: '#efd84d'},
+                emptyFill: '#A9ACB0',
+                animation: { duration: 2200, easing: "circleProgressEasing" }
+            }).on('circle-animation-progress', function(event, progress, stepValue) {
+                $(this).find('p').html('+'+Math.round( ( (stepValue*100*5) ))  + '<i>%</i>');
+            });
+        }
+
+        if(elem.hasClass('d')) {
+            elem.circleProgress({
+                fill: {color: '#efd84d'},
+                emptyFill: '#A9ACB0',
+                animation: { duration: 1700, easing: "circleProgressEasing" }
+            }).on('circle-animation-progress', function(event, progress, stepValue) {
+                $(this).find('p').html('+'+Math.round( ( (stepValue*100) ))  + '<i>%</i>');
+            });
+        }
+
+        elem.addClass('circle-init');
+    }
+};
+
+coha._terminateProgressCircle = function(c) {
+    c.removeClass('circle-init');
+}
+
 coha._initPanZoom = function() {
     // Pan Zoom
-    $(".emotion--element.pan .banner-slider--item:not(.pan--init), .emotion--element.pan .banner--image:not(.pan--init)").pan().each(function() {
+    $(".emotion--element.pan .banner-slider--item:not(.pan--init), .emotion--element.pan .banner--image:not(.pan--init)").each(function() {
         var oElement = $(this);
         var sSrc = oElement.find('.banner--image-src, .banner-slider--image');
         oElement.attr('src', sSrc.attr('src'));
-        oElement.addClass('.pan--init');
+
+        oElement.pan();
+        oElement.addClass('pan--init');
     });
 };
 
@@ -154,6 +271,13 @@ coha._initBobbles = function() {
     });
 };
 
+coha.onScroll = function() {
+    var y = $(document).scrollTop();
+    var yh = y + $(window).height();
+
+    // Check Progress Circles
+    coha.checkProgressCircles(y, yh);
+};
 
 coha.random = function(min, max) {
     if(typeof max === 'undefined') {
@@ -176,6 +300,11 @@ coha.generateBobbles = function(oContainer) {
 
     // Generate New Bobbles
     var iBobbleCount = coha.random(8,15);
+
+    if(oContainer.hasClass('few')) {
+        iBobbleCount = coha.random(5,8);
+    }
+
     var aColors = [
         '#54656c', 
         '#727e85', 
@@ -415,5 +544,10 @@ jQuery(document).ready(function ($) {
 
         // 
         if(coha.bInitOnceAfterAjax) coha._initOnceAfterAjax();
+    });
+
+    // On Scroll
+    $(window).scroll(function() {
+        coha.onScroll();
     });
 });
