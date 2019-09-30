@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/coha-it/happy-feels-shopware-theme#readme",
   "dependencies": {
+    "jquery-asPieProgress": "^0.4.7",
     "owl.carousel": "^2.3.4"
   }
 }

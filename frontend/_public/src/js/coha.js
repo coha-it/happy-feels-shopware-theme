@@ -54,6 +54,7 @@ var coha = {
     _initAosClasses: function() {},
     _initStickish: function() {},
     _initTextOverflow: function() {},
+    _initPanZoom: function() {},
 
 };
 var debug = coha._debug;
@@ -112,6 +113,9 @@ coha._initMultipleTimes = function() {
     // Coha Init Bobbles
     coha._initBobbles();
 
+    // Init Pan Zoom
+    coha._initPanZoom();
+
     // Fake Window Resize
     coha.windowResize();
 };
@@ -119,6 +123,16 @@ coha._initMultipleTimes = function() {
 
 coha.windowResize = function() {
     $( window ).resize();
+};
+
+coha._initPanZoom = function() {
+    // Pan Zoom
+    $(".emotion--element.pan .banner-slider--item:not(.pan--init), .emotion--element.pan .banner--image:not(.pan--init)").pan().each(function() {
+        var oElement = $(this);
+        var sSrc = oElement.find('.banner--image-src, .banner-slider--image');
+        oElement.attr('src', sSrc.attr('src'));
+        oElement.addClass('.pan--init');
+    });
 };
 
 coha._initBobbles = function() {

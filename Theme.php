@@ -26,14 +26,20 @@ SHOPWARE_EOD;
 
     protected $css = [
         //'src/css/aos/aos.css'
-        
-        
+
+
         // Materialize CSS - disabled
         // 'src/assets/materialize-css-coha/materialize/bin/materialize.css',
 
         // OWL
         '../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
-        '../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css'
+        '../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css',
+
+	// jquery PanZoom
+	'src/assets/jquery.pan/jquery.pan/dist/css/jquery.pan.css',
+
+	// Pie Charts
+	'../../node_modules/jquery-asPieProgress/dist/css/asPieProgress.min.css'
     ];
 
     protected $javascript = [
@@ -52,6 +58,12 @@ SHOPWARE_EOD;
 
         // OWL
         '../../node_modules/owl.carousel/dist/owl.carousel.js',
+
+	// jQuery PanZoom
+	'src/assets/jquery.pan/jquery.pan/dist/jquery.pan.min.js',
+
+	// Pie chart
+	'../../node_modules/jquery-asPieProgress/dist/jquery-asPieProgress.min.js',
 
         // Coha Stickish
         'src/js/coha.stickish.js',
