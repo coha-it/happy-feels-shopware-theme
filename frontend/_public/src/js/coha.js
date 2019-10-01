@@ -81,6 +81,11 @@ coha._initOnce = function() {
         coha.windowResize();
     });
 
+    // On Click a Bobble
+    $(document).on('click', '.bobble-inside, .bobble-outside', function(event) {
+        coha.generateBobbles($('.bobbles'));
+    });
+
     // Init Members Once
     coha._initMembersOnce();
 
@@ -291,12 +296,11 @@ coha.getRandomFromArray = function(arr) {
     return arr[Math.floor(Math.random()*arr.length)];
 };
 
-coha.generateBobbles = function(oContainer) {
-    console.log('generate Bobbles');
 
+coha.generateBobbles = function(oContainer) {
     // Clear Bobbles
-    var oBobbles = oContainer.prev('.bobbles-wrapper').find('.bobbles-inner');
-    oBobbles.empty();
+    var oBobblesWrapper = oContainer.prev('.bobbles-wrapper').find('.bobbles-inner');
+    // oBobblesWrapper.empty();
 
     // Generate New Bobbles
     var iBobbleCount = coha.random(8,15);
@@ -315,20 +319,44 @@ coha.generateBobbles = function(oContainer) {
     ];
 
     for (var i = 0; i < iBobbleCount; i++) {
-        var oBobbleOutside = $('<div class="bobble-outside"></div>').appendTo(oBobbles);
-            oBobbleOutside
-                .css('left', coha.random(-25,125) + '%')
-                // .css('left', coha.random(-100,2000) + 'px')
-                .css('top',  coha.random(-25,125) + '%')
-                // .css('top',  coha.random(-100,2000) + 'px')
-                ;
-        var oBobbleInside  = $('<div class="bobble-inside"></div>' ).appendTo(oBobbleOutside);
-            oBobbleInside
-                // .css('padding', coha.random(5,120))
-                .css('padding', 'calc('+coha.random(100,1000)+'vw / 100)')
-                .css('background-color', coha.getRandomFromArray(aColors));
+        var oBobbleOutside,
+            oBobbleInside;
+
+        if(oBobblesWrapper.find('.bobble-outside').eq(i).length) {
+            // Move
+            oBobbleOutside = oBobblesWrapper.find('.bobble-outside').eq(i);
+            oBobbleInside = oBobbleOutside.find('.bobble-inside').eq(i);
+        } else {
+            // Create
+            oBobbleOutside = $('<div class="bobble-outside"></div>').appendTo(oBobblesWrapper);
+            oBobbleInside  = $('<div class="bobble-inside"></div>' ).appendTo(oBobbleOutside);
+        }
+
+        oBobbleOutside
+            .css('left', coha.random(-25,125) + '%')
+            .css('top',  coha.random(-25,125) + '%')
+            .css('transition', coha.random(200, 1500) + 'ms');
+            ;
+        oBobbleInside
+            .css('padding', 'calc('+coha.random(100,1000)+'vw / 100)')
+            .css('background-color', coha.getRandomFromArray(aColors))
+            .css('transition', coha.random(200, 1500) + 'ms');
+            ;
     }
+    
+    oBobblesWrapper
+        .find('.bobble-outside')
+        .eq(iBobbleCount)
+        .nextAll()
+        .find('.bobble-inside')
+        .css('transform', 'scale(0) !important')
+        .hide({
+            padding: 0,
+        }, coha.random(500,1750), function() {
+            $(this).parent().remove();
+        });
 };
+
 
 coha._initHashInUrl = function() {
     if(window.location.hash) {
