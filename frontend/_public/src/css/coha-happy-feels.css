@@ -530,7 +530,7 @@ blockquote {
 .product-slider--container.is--horizontal {text-align: center;}
 
 /* Product / Article Listing */
-.listing--container {overflow: visible;overflow: inherit;}
+.listing--container {overflow: visible;overflow: inherit;float: none;clear: both;}
 .listing .product--box .box--content {background: #fff;border-color: #ffffff;border: unset;box-shadow: 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,64,67,.16);}
 
 
