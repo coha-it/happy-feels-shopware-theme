@@ -33,7 +33,7 @@ li {list-style-position: inside;}
 .js--fancy-select:after {border: unset;}
 
 
-.btn {transition: 200ms;text-transform: uppercase;letter-spacing: .03em;font-weight: bold;border-radius: 4px;padding: 0.125rem 1.5rem;border: 1px solid #cccccc;border-radius: 2px;}
+.btn {transition: 200ms;text-transform: uppercase;letter-spacing: .03em;font-weight: bold;border-radius: 4px;padding: 0.125rem 1.5rem;border: 1px solid #cccccc;border-radius: 2px;border-width: 0 !important;}
 .btn:hover {color: inherit;border-color: #c7c7c7;background-color: #f3f3f3;color: #30454b;}
 
 .btn:disabled,
@@ -45,6 +45,12 @@ li {list-style-position: inside;}
 .btn.is--primary:hover,
 .btn.is--primary:active,
 .btn.is--primary:focus {color: #fff; background: #eed64b;border-color: #eed64b;}
+
+
+.btn.is--secondary {color: #fff;background: #758589;border-color: #758589;}
+.btn.is--secondary:hover,
+.btn.is--secondary:active,
+.btn.is--secondary:focus {color: #fff;background: #88989c;border-color: #95a5a9;}
 
 
 .product--details .product--header {height: auto;min-height: unset;padding: 15px 0 0;}
