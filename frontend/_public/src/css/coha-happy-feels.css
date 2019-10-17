@@ -62,6 +62,8 @@ li {list-style-position: inside;}
     }
 }
 
+.content--description ul.content--list.list--unstyled {  text-align: center;}
+
 /* Header Logo Centering*/
 .header-main .top-bar {
     display: none;
