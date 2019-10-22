@@ -49,6 +49,9 @@ SHOPWARE_EOD;
 
         // Coha Stickish
         'src/js/coha.stickish.js',
+
+        // Coha JS
+        'src/js/coha.js',
     ];
 
     protected $css = [
