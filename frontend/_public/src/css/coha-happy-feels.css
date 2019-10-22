@@ -33,7 +33,7 @@ li {list-style-position: inside;}
 .js--fancy-select:after {border: unset;}
 
 
-.btn {transition: 200ms;text-transform: uppercase;letter-spacing: .03em;font-weight: bold;border-radius: 4px;padding: 0.125rem 1.5rem;border: 1px solid #cccccc;border-radius: 2px;border-width: 0 !important;}
+.btn {transition: 200ms;text-transform: uppercase;letter-spacing: .03em;font-weight: bold;border-radius: 4px;padding: 0.125rem 1.5rem;border: 1px solid #cccccc;border-radius: 2px;}
 .btn:hover {color: inherit;border-color: #c7c7c7;background-color: #f3f3f3;color: #30454b;}
 
 .btn:disabled,
@@ -63,6 +63,7 @@ li {list-style-position: inside;}
 }
 
 .content--description ul.content--list.list--unstyled {  text-align: center;}
+.content--description ul.content--list.list--unstyled li {margin: 10px 5px;}
 
 /* Header Logo Centering*/
 .header-main .top-bar {
