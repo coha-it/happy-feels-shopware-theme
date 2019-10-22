@@ -558,24 +558,28 @@ coha._initAosClasses = function() {
 }
 
 
-// On Document Ready
-jQuery(document).ready(function ($) {
-    'use strict';
+document.asyncReady(function() {
 
-    // Initialize Coha!
-    coha._initOnce();
+    // On Document Ready
+    jQuery(document).ready(function ($) {
+        'use strict';
 
-    // On Ajax-Complete
-    $(document).ajaxComplete(function() {
-        // Initialize Coha Multiple Times
-        coha._initMultipleTimes();
+        // Initialize Coha!
+        coha._initOnce();
 
-        // 
-        if(coha.bInitOnceAfterAjax) coha._initOnceAfterAjax();
+        // On Ajax-Complete
+        $(document).ajaxComplete(function() {
+            // Initialize Coha Multiple Times
+            coha._initMultipleTimes();
+
+            // 
+            if(coha.bInitOnceAfterAjax) coha._initOnceAfterAjax();
+        });
+
+        // On Scroll
+        $(window).scroll(function() {
+            coha.onScroll();
+        });
     });
-
-    // On Scroll
-    $(window).scroll(function() {
-        coha.onScroll();
-    });
+    // do your magic here  
 });
