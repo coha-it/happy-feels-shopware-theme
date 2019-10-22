@@ -553,6 +553,10 @@ blockquote {
 .box--list.product--box .product--title {font-size: 1.5rem;line-height: 1.25;font-weight: 500;height: inherit;}
 .box--list.product--box .product--description {height: auto;white-space: pre-line;}
 
+@media screen and (min-width: 64em) {
+    .box--basic:nth-of-type(2n+3) {clear: left;}
+}
+
 
 /* Product Slider Arrows */
 .product-slider--arrow {background: transparent;border: 0;color: #d9d9d9;/* color: rgba(255, 255, 255, 0.54); */font-size: 2rem;font-weight: 100;width: 60px;height: 60px;text-align: center;padding: 0;vertical-align: middle;align-items: center;display: flex;align-items: center;justify-content: center;transition: 200ms;border-radius: 100% !important;}
@@ -897,6 +901,10 @@ a {color: #000;}
 }
 /* End: Scroll Down Mouse */
 
+
+body .emotion--mode-rows .emotion--product-slider {
+  background-color: transparent;
+}
 
 @media screen and (min-width: 480px) {
 

@@ -4,3 +4,6 @@
 [submodule "frontend/_public/src/assets/jquery.pan/jquery.pan"]
 	path = frontend/_public/src/assets/jquery.pan/jquery.pan
 	url = https://github.com/saplumbaga/jquery.pan
+[submodule "frontend/_public/src/assets/jquery.stickOnScroll"]
+	path = frontend/_public/src/assets/jquery.stickOnScroll
+	url = https://github.com/purtuga/jquery.stickOnScroll.git
