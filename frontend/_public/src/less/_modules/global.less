@@ -57,20 +57,21 @@ em.red-dot-dot {
 .reddot {
         position: relative;
         &:before {
-            content: "";
-            background-color: #E95323;
-            width: 0;
-            height: 0;
-            padding: .275em;
-            padding: 7px;
-            padding: 10px;
-            border-radius: 100%;
-            position: absolute;
-            right: 100%;
-            bottom: 100%;
-            margin: 0 0.3275em -0.3275em 0;
-            pointer-events: none;
-            z-index: 1;
+		    content: "";
+		    background-color: #E95323;
+		    width: 0;
+		    height: 0;
+		    padding: .275em;
+		    padding: 7px;
+		    padding: 10px;
+		    border-radius: 100%;
+		    position: absolute;
+		    /* right: 100%; */
+		    /* bottom: 100%; */
+		    margin: 0 0.3275em -0.3275em 0;
+		    pointer-events: none;
+		    z-index: 1;
+		    transform: translate(-125%, -25%);
         }
 }
 
