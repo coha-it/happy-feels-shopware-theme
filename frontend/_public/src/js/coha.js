@@ -131,7 +131,6 @@ coha._initMultipleTimes = function() {
     coha.windowResize();
 };
 
-
 coha.windowResize = function() {
     $( window ).resize();
 };
@@ -141,12 +140,11 @@ coha._initScrollMagicElements = function() {
     var oCph = $('.coha--plant-hand')
     var sIc = 'init--scrollmagic';
 
-    if( !oCph.hasClass(sIc) ){
-        
+    if (!oCph.hasClass(sIc)) {
         oCph
             .css('transform-origin', '0 0')
-            .find('.emotion--banner').css('margin-left','-5px');
-            
+            .find('.emotion--banner').css('margin-left', '-5px');
+
         var tween0 = TweenMax.from('.coha--plant-hand', 1, {transform: "translate(-5%) scale(.9)", opacity: 1});
         var scene0 = new ScrollMagic.Scene(
             {
@@ -201,19 +199,19 @@ coha._initProgressCircle = function(elem) {
                 emptyFill: '#A9ACB0',
                 animation: { duration: 1500, easing: "circleProgressEasing" }
             }).on('circle-animation-progress', function(event, progress, stepValue) {
-                $(this).find('p').html(Math.round( ( (stepValue*100) ))  + '<i>%</i>');
+                $(this).find('p').html(Math.round(((stepValue * 100))) + '<i>%</i>');
             });
         }
 
         if(elem.hasClass('b')) {
             elem.circleProgress({
                 // fill: {color: '#cab017'},
-                fill: {gradient: [['#cab017', .5], ['#efd84d', .5]], gradientAngle: Math.PI},
+                fill: {gradient: [['#cab017', 0.5], ['#efd84d', 0.5]], gradientAngle: Math.PI},
                 // fill: {gradient: [['#ff0000', .5], ['#00ff00', .5]], gradientAngle: Math.PI},
                 emptyFill: '#A9ACB0',
                 animation: { duration: 1400, easing: "circleProgressEasing" },
             }).on('circle-animation-progress', function(event, progress, stepValue) {
-                $(this).find('p').html('+'+Math.round( ( (stepValue*100) ))  + '<i>%</i>');
+                $(this).find('p').html('+' + Math.round(((stepValue * 100))) + '<i>%</i>');
             });
         }
 
@@ -223,7 +221,7 @@ coha._initProgressCircle = function(elem) {
                 emptyFill: '#A9ACB0',
                 animation: { duration: 2200, easing: "circleProgressEasing" }
             }).on('circle-animation-progress', function(event, progress, stepValue) {
-                $(this).find('p').html('+'+Math.round( ( (stepValue*100*5) ))  + '<i>%</i>');
+                $(this).find('p').html('+'+Math.round(((stepValue * 100 * 5))) + '<i>%</i>');
             });
         }
 
@@ -233,7 +231,7 @@ coha._initProgressCircle = function(elem) {
                 emptyFill: '#A9ACB0',
                 animation: { duration: 1700, easing: "circleProgressEasing" }
             }).on('circle-animation-progress', function(event, progress, stepValue) {
-                $(this).find('p').html('+'+Math.round( ( (stepValue*100) ))  + '<i>%</i>');
+                $(this).find('p').html('+' + Math.round((( stepValue * 100))) + '<i>%</i>');
             });
         }
 
@@ -293,9 +291,8 @@ coha.random = function(min, max) {
 };
 
 coha.getRandomFromArray = function(arr) {
-    return arr[Math.floor(Math.random()*arr.length)];
+    return arr[Math.floor(Math.random() * arr.length)];
 };
-
 
 coha.generateBobbles = function(oContainer) {
     // Clear Bobbles
@@ -336,14 +333,12 @@ coha.generateBobbles = function(oContainer) {
             .css('left', coha.random(-25,125) + '%')
             .css('top',  coha.random(-25,125) + '%')
             .css('transition', coha.random(200, 1500) + 'ms');
-            ;
         oBobbleInside
             .css('padding', 'calc('+coha.random(100,1000)+'vw / 100)')
             .css('background-color', coha.getRandomFromArray(aColors))
             .css('transition', coha.random(200, 1500) + 'ms');
-            ;
     }
-    
+
     oBobblesWrapper
         .find('.bobble-outside')
         .eq(iBobbleCount)
@@ -356,7 +351,6 @@ coha.generateBobbles = function(oContainer) {
             $(this).parent().remove();
         });
 };
-
 
 coha._initHashInUrl = function() {
     if(window.location.hash) {
@@ -390,7 +384,6 @@ coha.textOverflow = function(e) {
     coha.windowResize();
 };
 
-
 coha._initTextOverflow = function() {
     $('.text-overflow:not(.init)').each(function(i) {
         var textOverflow = $(this);
@@ -403,7 +396,6 @@ coha._initTextOverflow = function() {
 // When Screen Resize
 coha.onScreenResize = function() {
 };
-
 
 // Init all Members Once
 coha._initMembersOnce = function() {
@@ -517,11 +509,9 @@ coha.playVideo = function() {
     });
 };
 
-
 coha._initSliders = function() {
 
-}
-
+};
 
 coha._initAosClasses = function() {
     var prefix = 'add--';
@@ -555,27 +545,30 @@ coha._initAosClasses = function() {
         }
     });
 
-}
+};
 
+document.asyncReady(function() {
 
-// On Document Ready
-jQuery(document).ready(function ($) {
-    'use strict';
+    // On Document Ready
+    jQuery(document).ready(function ($) {
+        'use strict';
 
-    // Initialize Coha!
-    coha._initOnce();
+        // Initialize Coha!
+        coha._initOnce();
 
-    // On Ajax-Complete
-    $(document).ajaxComplete(function() {
-        // Initialize Coha Multiple Times
-        coha._initMultipleTimes();
+        // On Ajax-Complete
+        $(document).ajaxComplete(function() {
+            // Initialize Coha Multiple Times
+            coha._initMultipleTimes();
 
-        // 
-        if(coha.bInitOnceAfterAjax) coha._initOnceAfterAjax();
+            // 
+            if(coha.bInitOnceAfterAjax) coha._initOnceAfterAjax();
+        });
+
+        // On Scroll
+        $(window).scroll(function() {
+            coha.onScroll();
+        });
     });
-
-    // On Scroll
-    $(window).scroll(function() {
-        coha.onScroll();
-    });
+    // do your magic here  
 });

@@ -49,11 +49,15 @@
 {block name='frontend_index_breadcrumb'}{/block}
 
 {block name="frontend_index_header_javascript_jquery_lib"}
-
     {$smarty.block.parent}
 
     {* Tmp Coha.js *}
-    <script type="text/javascript" src="{link file='frontend/_public/src/js/coha.js'}">
-
+    {* <script type="text/javascript" src="{link file='frontend/_public/src/js/coha.js'}"> *}
 {/block}
 
+{block name="frontend_index_body_inline"}
+    {$smarty.block.parent}
+
+    {* Tmp Coha.js *}
+    {* <script async type="text/javascript" src="{link file='frontend/_public/src/js/coha.js'}"> *}
+{/block}

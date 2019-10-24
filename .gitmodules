@@ -4,3 +4,9 @@
 [submodule "frontend/_public/src/assets/jquery.pan/jquery.pan"]
 	path = frontend/_public/src/assets/jquery.pan/jquery.pan
 	url = https://github.com/saplumbaga/jquery.pan
+[submodule "frontend/_public/src/assets/jquery.stickOnScroll"]
+	path = frontend/_public/src/assets/jquery.stickOnScroll
+	url = https://github.com/purtuga/jquery.stickOnScroll.git
+[submodule "frontend/_public/src/assets/material-design-icons"]
+	path = frontend/_public/src/assets/material-design-icons
+	url = git@github.com:google/material-design-icons.git
