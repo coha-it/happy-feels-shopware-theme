@@ -66,7 +66,7 @@ SHOPWARE_EOD;
         '../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css',
 
 	    // jquery PanZoom
-	    // 'src/assets/jquery.pan/jquery.pan/dist/css/jquery.pan.css',
+	    'src/assets/jquery.pan/jquery.pan/dist/css/jquery.pan.css',
     ];
 
     // function __construct()

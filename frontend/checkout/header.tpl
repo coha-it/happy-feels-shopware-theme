@@ -28,8 +28,6 @@
 
                 
         {* Trusted Shops *}
-        {block name='frontend_index_logo_trusted_shops'}
-                
-        {/block}
+        {block name='frontend_index_logo_trusted_shops'}{/block}
     </div>
 {/block}
