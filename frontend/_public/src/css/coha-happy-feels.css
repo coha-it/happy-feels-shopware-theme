@@ -1050,8 +1050,6 @@ body .emotion--mode-rows .emotion--product-slider {
 }
 
 
-<<<<<<< HEAD
-=======
 /* Shopping Cart */
 .container--ajax-cart.off-canvas {width: 80vw;max-width: 450px;min-width: 200px;}
 .ajax--cart .cart--item .thumbnail--image {}
@@ -1072,4 +1070,5 @@ body .emotion--mode-rows .emotion--product-slider {
 .account--menu {border: 0;}
 .account--welcome {background: transparent;}
 .account--menu .navigation--headline {font-weight: 600;text-transform: uppercase;letter-spacing: .1em;}
->>>>>>> f31226774b684c3ca6e3aab3173530784be924ca
+
+
