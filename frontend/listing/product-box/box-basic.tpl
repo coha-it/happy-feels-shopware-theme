@@ -7,4 +7,4 @@
        title="{$sArticle.articleName|escapeHtml}">
         {$sArticle.articleName|truncate:150|escapeHtml}
     </a>
-{/block
+{/block}
