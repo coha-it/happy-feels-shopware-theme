@@ -572,6 +572,7 @@ blockquote {
 
 
 /* Product Badges */
+.product--badges {pointer-events: none;}
 .product--badges .product--badge.coha--badge.termin.label {background: #afcdd4;}
 .product--badges .product--badge.coha--badge.ausbildung.label {background: #e1c831;}
 .product--badges .product--badge.coha--badge.kostenlos {background: #41bb94;}
