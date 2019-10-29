@@ -44,7 +44,7 @@ li {list-style-position: inside;}
 .btn.is--disabled,
 .btn.is--disabled:hover {background: #dadada;color: #727e85;}
 
-.btn.is--primary {color: #fff; background: #e1c832;border-color: #e1c832;}
+.btn.is--primary {color: #fff;background: #e8d040;border-color: #e8d040;}
 .btn.is--primary:hover,
 .btn.is--primary:active,
 .btn.is--primary:focus {color: #fff; background: #eed64b;border-color: #eed64b;}
