@@ -740,10 +740,10 @@ a {color: #323d42;}
 .is--minimal-header .header-main .header-inner {height: auto;}
 .steps--container .steps--content {padding: 0 0 10px;border: 0;}
 .steps--content .steps--entry.steps--spacer {width: auto;padding-left: 0;padding-right: 0;}
-.steps--content .steps--entry .icon {padding: 0;display: inline-flex;align-items: center;justify-content: center;width: 30px;height: 30px;font-size: 1.15em;font-weight: normal;}
+.steps--content .steps--entry .icon {padding: 0;display: inline-flex;align-items: center;justify-content: center;min-width: 30px;width: 30px;height: 30px;font-size: 1.15em;font-weight: normal;object-fit: cover;}
 .steps--content .steps--entry:not(.is--active) .icon {background: transparent;color: #727e85;border: 1px solid #727e85;}
-.steps--content .steps--entry {padding: 0;display: flex;align-items: center;justify-content: center;align-self: center;text-align: center;width: 100%;}
-.steps--content .steps--list {display: flex;width: 100%;align-items: center;justify-content: center;align-self: center;}
+.steps--content .steps--entry {padding: 0;display: flex;align-items: center;justify-content: center;align-self: center;text-align: center;width: auto;}
+.steps--content .steps--list {display: flex;width: 100%;align-items: center;justify-content: space-around;align-self: center;}
 .steps--content .steps--entry .text {height: auto;width: auto;text-align: left;}
 
 
