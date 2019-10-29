@@ -1109,10 +1109,3 @@ body .emotion--mode-rows .emotion--product-slider {
 .account--welcome {background: transparent;}
 .account--menu .navigation--headline {font-weight: 600;text-transform: uppercase;letter-spacing: .1em;}
 
-
-
-
-/* TMP */
-a.content--link.link--download.btn.is--secondary {position: absolute;top: 10px;right: 10px;}
-.tab--container .tab--content .content--description {position: relative;}
-/* // TMP */
