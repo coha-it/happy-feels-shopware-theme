@@ -319,7 +319,8 @@ blockquote {
 .filter--container .filter-panel {background: transparent;border-width: 1px;border-radius: 0;border-color: transparent;}
 
 @media screen and (min-width: 48em) {
-  .sidebar--navigation .navigation--entry {text-align: left;}
+  .sidebar--navigation .navigation--entry {text-align: left;padding-top: 5px;padding-bottom: 5px;}
+  .sidebar--navigation .navigation--entry:first-child {padding-top: 0;}
   .sidebar--navigation .navigation--entry .navigation--link:before {position: absolute;}
 }
 /* // SIDEBAR AND FILTER */
