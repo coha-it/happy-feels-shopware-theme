@@ -834,6 +834,22 @@ a {color: #000;}
 .produkt-welt--banner-wrapper .emotion--element:nth-of-type(6) img {animation-duration: 1600ms;}
 .produkt-welt--banner-wrapper .emotion--element:nth-of-type(7) img {animation-duration: 1700ms;}
 
+
+/* Angebote und Angebot */
+.angebote .angebot.text h2 a
+.angebote .angebot.text h3 a,
+.angebote .angebot.text h4 a{transition: 200ms;}
+
+.angebote .angebot.text h2 a:not(:hover),
+.angebote .angebot.text h3 a:not(:hover),
+.angebote .angebot.text h4 a:not(:hover) {color: inherit;}
+
+.angebote .angebot.text h2 a:before,
+.angebote .angebot.text h3 a:before,
+.angebote .angebot.text h4 a:before {display: none;}
+
+
+
 @keyframes XproduktWeltBannerImg {
   0%    {transform: scale(1.25); opacity: 0.2;}
   10%    {transform: scale(1.25); }
