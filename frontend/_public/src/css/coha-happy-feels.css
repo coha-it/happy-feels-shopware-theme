@@ -574,6 +574,7 @@ blockquote {
 /* Product Badges */
 .product--badges .product--badge.coha--badge.termin.label {background: #afcdd4;}
 .product--badges .product--badge.coha--badge.ausbildung.label {background: #e1c831;}
+.product--badges .product--badge.coha--badge.kostenlos {background: #41bb94;}
 
 /* Start: Team 2 */
 .members .emotion--blog .blog--container .blog--entry {display: grid;grid-template-columns: auto 2fr;align-items: center;align-self: center;padding: 0;margin: 20px 0;min-width: 450px;}
