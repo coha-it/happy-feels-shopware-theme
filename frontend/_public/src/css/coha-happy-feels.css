@@ -33,8 +33,9 @@ li {list-style-position: inside;}
 .js--fancy-select:after {border: unset;}
 
 
-.btn {transition: 200ms;text-transform: uppercase;letter-spacing: .03em;font-weight: bold;/* margin: 5px 5px; */border-radius: 4px;padding: 0.125rem 1.5rem;/* border: 1px solid #cccccc; */border-radius: 2px; text-align: center;}
+.btn {transition: 200ms;text-transform: uppercase;letter-spacing: .03em;font-weight: bold;/* margin: 5px 5px; */border-radius: 4px;padding: 0.125rem 1.5rem;/* border: 1px solid #cccccc; */border-radius: 2px; }
 .btn:hover {color: inherit;/* border-color: #c7c7c7; *//* background-color: #f3f3f3; */color: #30454b;/* opacity: .5; */background: #fff;transform: translateY(-1px);border-color: #fff;}
+.btn.is--block {text-align: center;}
 
 .btn:not(.is--primary):not(.is--secondary) {box-shadow: 0 0.15em 0.8em rgba(126,87,88,.1), 0 0.1em 0.5em rgba(0,0,0,.08);box-shadow: 0 2px 14px rgba(126,87,88,.1), 0 3px 6px rgba(0,0,0,.08);}
 .btn:not(.is--primary):not(.is--secondary):hover {box-shadow: 0 6px 20px rgba(126,87,88,.1), 0 6px 10px rgba(0,0,0,.08);}
