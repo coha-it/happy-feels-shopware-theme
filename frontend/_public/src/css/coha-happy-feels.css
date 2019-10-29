@@ -618,7 +618,9 @@ blockquote {
 .product--box .product--description,
 .product--box .product--description p {-webkit-line-clamp: 4;}
 
-
+/* Product Description List Style */
+.product--description ul {padding-left: 20px;}
+.product--description li {list-style-position: inherit;}
 
 /* Product / Article Listing: Full-Width-List */
 .product--box.box--list .product--title {font-size: 1.55em;line-height: 1.25;font-weight: 400;height: auto;}
@@ -1108,3 +1110,9 @@ body .emotion--mode-rows .emotion--product-slider {
 .account--menu .navigation--headline {font-weight: 600;text-transform: uppercase;letter-spacing: .1em;}
 
 
+
+
+/* TMP */
+a.content--link.link--download.btn.is--secondary {position: absolute;top: 10px;right: 10px;}
+.tab--container .tab--content .content--description {position: relative;}
+/* // TMP */
