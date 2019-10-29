@@ -1123,3 +1123,13 @@ body .emotion--mode-rows .emotion--product-slider {
 .account--welcome {background: transparent;}
 .account--menu .navigation--headline {font-weight: 600;text-transform: uppercase;letter-spacing: .1em;}
 
+/* Cookie */
+.page-wrap--cookie-permission .cookie-permission--container {display: flex;align-items: center;justify-content: center;}
+.page-wrap--cookie-permission .cookie-permission--container .cookie-permission--content {width: auto !important;}
+.page-wrap--cookie-permission .cookie-permission--container .cookie-permission--button {position: unset !important;}
+.page-wrap--cookie-permission .cookie-permission--container .cookie-permission--button .btn {margin: 5px !important;}
+
+@media screen and (max-width: 770px) {
+    .page-wrap--cookie-permission .cookie-permission--container {flex-flow: column;}
+}
+
