@@ -1134,3 +1134,6 @@ body .emotion--mode-rows .emotion--product-slider {
     .page-wrap--cookie-permission .cookie-permission--container {flex-flow: column;}
 }
 
+/* Quickfix */
+.entry--cart .navigation--link {padding-top: 4px;padding-bottom: 0;}
+/* End: Quickfix */
