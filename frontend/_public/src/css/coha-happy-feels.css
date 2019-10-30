@@ -326,8 +326,9 @@ blockquote {
 
 @media screen and (min-width: 48em) {
   .sidebar--navigation .navigation--entry {text-align: left;padding-top: 5px;padding-bottom: 5px;}
-  .sidebar--navigation .navigation--entry:first-child {padding-top: 0;}
   .sidebar--navigation .navigation--entry .navigation--link:before {position: absolute;}
+
+  .sidebar--navigation.is--level0 > .navigation--entry:first-child {padding-top: 0;}
 }
 /* // SIDEBAR AND FILTER */
 
