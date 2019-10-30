@@ -618,7 +618,7 @@ blockquote {
 
 .product--box .product--title {height: auto;min-height: 1em;font-size: 1.15em;line-height: 1.2;font-weight: 600;display: flex;max-height: 2.5em;overflow: hidden;-webkit-line-clamp: 2;}
 
-.product--box .product--description {height: 5.1em;}
+.product--box .product--description {height: 6em;}
 .product--box .product--description,
 .product--box .product--description p {-webkit-line-clamp: 4;}
 
