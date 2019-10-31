@@ -135,29 +135,60 @@ coha.windowResize = function() {
     $( window ).resize();
 };
 
-coha._initScrollMagicElements = function() {
+coha.scrollMagicElement = function(sClass) {
+	var sInitClass = 'init--scrollmagic';
+    var oElement = $(sClass);
 
-    var oCph = $('.coha--plant-hand')
-    var sIc = 'init--scrollmagic';
+    if (!oElement.hasClass(sInitClass))
+	{
 
-    if (!oCph.hasClass(sIc)) {
-        oCph
-            .css('transform-origin', '0 0')
-            .find('.emotion--banner').css('margin-left', '-5px');
+		switch(sClass) {
+			// Plant Hand
+			case '.coha--plant-hand':
+		        oElement
+		            .css('transform-origin', '0 0')
+		            .find('.emotion--banner').css('margin-left', '-5px');
 
-        var tween0 = TweenMax.from('.coha--plant-hand', 1, {transform: "translate(-5%) scale(.9)", opacity: 1});
-        var scene0 = new ScrollMagic.Scene(
-            {
-                triggerElement: '.coha--plant-hand',
-                duration: '35%', 
-                /*triggerHook: 0.95*/
-            })
-            .setTween(tween0)
-            .addTo(CohaSmc);
+		        var tween0 = TweenMax.from(sClass, 1, {transform: "translate(-5%) scale(.9)", opacity: 1});
+		        var scene0 = new ScrollMagic.Scene(
+		            {
+		                triggerElement: sClass,
+		                duration: '35%', 
+		                /*triggerHook: 0.95*/
+		            })
+		            .setTween(tween0)
+		            .addTo(CohaSmc);
 
-        oCph.addClass(sIc);
+		        oElement.addClass(sInitClass);
+				break;
+
+			// Brain Activity
+			case '.coha--brain-creativity':
+
+		        var tween0 = TweenMax.from(sClass, 1, {transform: "scale(.9)", opacity: 1});
+		        var scene0 = new ScrollMagic.Scene(
+		            {
+		                triggerElement: sClass,
+		                duration: '100%', 
+		                triggerHook: 1
+		            })
+		            .setTween(tween0)
+		            .addTo(CohaSmc);
+
+		        oElement.addClass(sInitClass);
+				break;
+
+			default:
+				break;
+		}
+
     }
 
+};
+
+coha._initScrollMagicElements = function() {
+    coha.scrollMagicElement('.coha--plant-hand');
+    coha.scrollMagicElement('.coha--brain-creativity');
 };
 
 coha._initProgressCircles = function() {
