@@ -632,7 +632,9 @@ blockquote {
 
 /* Product / Article Listing: Full-Width-List */
 .product--box.box--list .product--title {font-size: 1.55em;line-height: 1.25;font-weight: 400;height: auto;}
-.product--box.box--list .product--description {height: auto;white-space: inherit;-webkit-line-clamp: unset;}
+.product--box.box--list .product--description,
+.product--box.box--list .product--description p {height: auto;white-space: inherit;-webkit-line-clamp: unset;}
+.product--box.box--list .product--description p:last-of-type {margin: 0;}
 .product--box.box--list .product--price-info {height: auto;}
 .product--box.box--list .product--description ul {margin: auto;}
 
