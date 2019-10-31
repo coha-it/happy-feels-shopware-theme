@@ -435,9 +435,9 @@ blockquote {
 
 /* Book-Payment Buttons */
 .book-payment-buttons {}
-.book-payment-buttons img {margin: 10px 10px 10px 0;box-shadow: 0px 1px 17px 0px rgba(0, 0, 0, 0.15);transition: 200ms;}
-.book-payment-buttons img:hover {transform: scale(1.05);}
-
+.book-payment-buttons a {height: 80px; width: auto;  margin: 10px 10px 10px 0;background-color: #fff; display: inline-block;  box-shadow: 0px 1px 17px 0px rgba(0, 0, 0, 0.15);transition: 200ms;}
+.book-payment-buttons a:hover {transform: scale(1.05);}
+.book-payment-buttons img {margin: 0;   object-fit: contain; }
 
 /* (6) Wachstumsfelder */
 .wachstumsfeld--html {}
@@ -496,7 +496,7 @@ blockquote {
 .blog--detail .blog--box p {font-size: 20px; line-height: 1.3;}
 .blog--detail .blog--box h2 {font-size: 1.75em; line-height: 1.2; font-weight: 400;}
 .blog--detail .blog--detail-header {background: transparent;}
-.blog--detail .blog--detail-headline {font-size: 2rem;font-size: 60px;line-height: 1.05;font-weight: 300;text-align: center;}
+.blog--detail .blog--detail-headline {font-size: 2rem;font-size: 60px;    font-size: calc(35px + 2vw);line-height: 1.05;font-weight: 300;text-align: center;}
 .blog--detail .panel--title {text-align: center;}
 .blog--detail .blog--box-metadata {text-align: center;}
 .blog--detail .blog--image {border: unset;border-radius: unset;}
@@ -941,10 +941,10 @@ a {color: #323d42;}
 .bobble-inside {background: #54656c;border-radius: 100%;height: 0;width: 0;padding: 150px;}
 
 /* Text Overflow */
-.text-overflow {}
+.text-overflow {margin-bottom: 20px;}
 .text-overflow.cutted {display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;}
 
-.text-overflow + .trigger {transition: 200ms; cursor: pointer;margin: -40px -20px -20px;padding: 20px;/*float: right;*/display: block;text-align: right;text-transform: uppercase;font-weight: 600;letter-spacing: .05em;font-size: 15px;/* z-index: 1; *//*position: absolute;*/right: 0;}
+.text-overflow + .trigger {cursor: pointer;margin: -40px -20px -20px;padding: 20px;/*float: right;*/display: block;text-align: right;text-transform: uppercase;font-weight: 600;letter-spacing: .05em;font-size: 15px;/* z-index: 1; *//*position: absolute;*/right: 0;}
 .text-overflow + .trigger:hover {color: #76949b;}
 .text-overflow + .trigger > span {display: none; text-decoration: underline;}
 .text-overflow.cutted + .trigger > span:nth-of-type(1) {display: inline-block;}
@@ -1158,5 +1158,10 @@ body .emotion--mode-rows .emotion--product-slider {
 /* Quickfix */
 .entry--cart .navigation--link {padding-top: 4px;padding-bottom: 0;}
 .emotion--container.not-relative {position: inherit;}
+
+/* TMP */.navigation--link[title=Shop] span:after{content:"Neu";pointer-events: none; position:absolute;top:-10px;color:#fff;background-color:#afc5cb;font-weight:700;right:0;display:inline-block;padding:2px 5px;border-radius:20px;font-size:10px;transform:rotate(10deg)}
+
 /* End: Quickfix */
+
+
 
