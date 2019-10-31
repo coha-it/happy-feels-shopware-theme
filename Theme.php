@@ -65,8 +65,12 @@ SHOPWARE_EOD;
         '../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
         '../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css',
 
-	    // jquery PanZoom
-	    'src/assets/jquery.pan/jquery.pan/dist/css/jquery.pan.css',
+        // jquery PanZoom
+        'src/assets/jquery.pan/jquery.pan/dist/css/jquery.pan.css',
+
+
+        // Coha Happy Feels
+        'src/css/coha-happy-feels.css',
     ];
 
     // function __construct()

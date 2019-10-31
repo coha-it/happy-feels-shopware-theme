@@ -9,5 +9,5 @@
     <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/brands.min.css">
 
     {* Tmp Custom.css *}
-    <link type="text/css" rel="stylesheet" href="{link file='frontend/_public/src/css/coha-happy-feels.css'}">
+    {* <link type="text/css" rel="stylesheet" href="{link file='frontend/_public/src/css/coha-happy-feels.css'}"> *}
 {/block}
