@@ -571,11 +571,10 @@ coha._initAosClasses = function() {
             }
         }
 
-        if(bFoundAos) {
+        if (bFoundAos) {
             aos_init();
         }
     });
-
 };
 
 document.asyncReady(function() {
@@ -585,21 +584,29 @@ document.asyncReady(function() {
         'use strict';
 
         // Initialize Coha!
-        coha._initOnce();
+        coha._initOnce(); // Once
+        coha._initMultipleTimes(); // And Multiple Times
 
         // On Ajax-Complete
         $(document).ajaxComplete(function() {
             // Initialize Coha Multiple Times
             coha._initMultipleTimes();
 
-            // 
-            if(coha.bInitOnceAfterAjax) coha._initOnceAfterAjax();
+            // If not already Inited Once
+            if (coha.bInitOnceAfterAjax) {
+                coha._initOnceAfterAjax();
+            }
+
+            // One Second After
+            setTimeout(function () { coha._initMultipleTimes(); }, 1000);
         });
+
+        // One Second After
+        setTimeout(function () { coha._initMultipleTimes(); }, 1000);
 
         // On Scroll
         $(window).scroll(function() {
             coha.onScroll();
         });
     });
-    // do your magic here  
 });
