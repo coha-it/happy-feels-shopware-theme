@@ -307,7 +307,7 @@ blockquote {
 }
 .emotion--wrapper {max-width: 1360px;}
 .emotion--wrapper .emotion--container {background: transparent;}
-.navigation--list-wrapper {justify-content: center;}
+body .navigation-main .container .navigation--list-wrapper {justify-content: center;}
 .navigation--list-wrapper .navigation--entry.entry--account {padding-right: 14px;} 
 /* //EXPERIMENTAL */
 
