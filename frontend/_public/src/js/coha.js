@@ -56,15 +56,19 @@ var coha = {
     _initTextOverflow: function() {},
     _initPanZoom: function() {},
 
+    // Endless Loop
+    iLoopCounter: 0,
+    fEndlessLoop: function() {}
+
 };
 var debug = coha._debug;
 
 // Initialize Once
 coha._initOnce = function() {
 
-    // On Screen Resize
+    // On Window Resize
     $( window ).resize(function() {
-        coha.onScreenResize();
+        coha.onWindowResize();
     });
 
     // On Click Text Overflow
@@ -136,51 +140,49 @@ coha.windowResize = function() {
 };
 
 coha.scrollMagicElement = function(sClass) {
-	var sInitClass = 'init--scrollmagic';
+    var sInitClass = 'init--scrollmagic';
     var oElement = $(sClass);
 
-    if (!oElement.hasClass(sInitClass))
-	{
+    if (!oElement.hasClass(sInitClass)) {
+        switch(sClass) {
+            // Plant Hand
+            case '.coha--plant-hand':
+                oElement
+                    .css('transform-origin', '0 0')
+                    .find('.emotion--banner').css('margin-left', '-5px');
 
-		switch(sClass) {
-			// Plant Hand
-			case '.coha--plant-hand':
-		        oElement
-		            .css('transform-origin', '0 0')
-		            .find('.emotion--banner').css('margin-left', '-5px');
+                var tween0 = TweenMax.from(sClass, 1, {transform: "translate(-5%) scale(.9)", opacity: 1});
+                var scene0 = new ScrollMagic.Scene(
+                    {
+                        triggerElement: sClass,
+                        duration: '35%', 
+                        /*triggerHook: 0.95*/
+                    })
+                    .setTween(tween0)
+                    .addTo(CohaSmc);
 
-		        var tween0 = TweenMax.from(sClass, 1, {transform: "translate(-5%) scale(.9)", opacity: 1});
-		        var scene0 = new ScrollMagic.Scene(
-		            {
-		                triggerElement: sClass,
-		                duration: '35%', 
-		                /*triggerHook: 0.95*/
-		            })
-		            .setTween(tween0)
-		            .addTo(CohaSmc);
+                oElement.addClass(sInitClass);
+                break;
 
-		        oElement.addClass(sInitClass);
-				break;
+            // Brain Activity
+            case '.coha--brain-creativity':
 
-			// Brain Activity
-			case '.coha--brain-creativity':
+                var tween0 = TweenMax.from(sClass, 1, {transform: "scale(.9)", opacity: 1});
+                var scene0 = new ScrollMagic.Scene(
+                    {
+                        triggerElement: sClass,
+                        duration: '100%', 
+                        triggerHook: 1
+                    })
+                    .setTween(tween0)
+                    .addTo(CohaSmc);
 
-		        var tween0 = TweenMax.from(sClass, 1, {transform: "scale(.9)", opacity: 1});
-		        var scene0 = new ScrollMagic.Scene(
-		            {
-		                triggerElement: sClass,
-		                duration: '100%', 
-		                triggerHook: 1
-		            })
-		            .setTween(tween0)
-		            .addTo(CohaSmc);
+                oElement.addClass(sInitClass);
+                break;
 
-		        oElement.addClass(sInitClass);
-				break;
-
-			default:
-				break;
-		}
+            default:
+                break;
+        }
 
     }
 
@@ -204,7 +206,7 @@ coha.checkProgressCircles = function(y, yh) {
         var c = $(elem)
         var cy = c.offset().top;
         var cyh = cy + c.outerHeight();
-        
+
         // They are visible!
         if(yh < cy || cyh < y) {
             // Unvisible Circle
@@ -425,7 +427,7 @@ coha._initTextOverflow = function() {
 };
 
 // When Screen Resize
-coha.onScreenResize = function() {
+coha.onWindowResize = function() {
 };
 
 // Init all Members Once
@@ -577,6 +579,22 @@ coha._initAosClasses = function() {
     });
 };
 
+coha.fEndlessLoop = function() {
+    // Count Looper
+    coha.iLoopCounter += 1;
+
+    // Start
+    if (coha.iLoopCounter < 15) {
+        coha._initMultipleTimes();
+        coha.windowResize();
+    }
+
+    setTimeout(function() {
+        coha.fEndlessLoop();
+        coha.iLoopCounter -= 1;
+    }, 4000);
+};
+
 document.asyncReady(function() {
 
     // On Document Ready
@@ -598,11 +616,21 @@ document.asyncReady(function() {
             }
 
             // One Second After
-            setTimeout(function () { coha._initMultipleTimes(); }, 1000);
+            setTimeout(function () {
+                coha._initMultipleTimes();
+                coha.windowResize();
+            }, 1000);
+
         });
 
         // One Second After
-        setTimeout(function () { coha._initMultipleTimes(); }, 1000);
+        setTimeout(function () {
+            coha._initMultipleTimes();
+            coha.windowResize();
+        }, 1000);
+
+        // Start The Endless Loop
+        coha.fEndlessLoop();
 
         // On Scroll
         $(window).scroll(function() {
