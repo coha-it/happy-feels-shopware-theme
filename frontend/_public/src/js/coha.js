@@ -633,7 +633,7 @@ document.asyncReady(function() {
 
             // One Second After
             setTimeout(function () {
-                ccoha.fIfEveryAjaxLoaded();
+                coha.fIfEveryAjaxLoaded();
             }, 1000);
 
         });
