@@ -61,3 +61,14 @@
     {* Tmp Coha.js *}
     {* <script async type="text/javascript" src="{link file='frontend/_public/src/js/coha.js'}"> *}
 {/block}
+
+{* Emotion Loader *}
+{block name='frontend_index_emotion_loading_overlay'}
+    {if $hasEmotion}
+        <div class="coha-puzzle-loader">
+            <div></div><div></div>
+            <div></div><div></div>
+            <div></div>
+        </div>
+    {/if}
+{/block}
