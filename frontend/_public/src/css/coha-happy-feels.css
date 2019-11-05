@@ -1166,20 +1166,4 @@ body .emotion--mode-rows .emotion--product-slider {
 /* End: Quickfix */
 
 /* Loader */
-.emotion--overlay {height: auto; width: auto;}
-.coha-puzzle-loader {height: 100px;width: 100px;color: #54656c;position: relative;display: inline-block;animation: cohaPuzzleLoaderStart 3s linear forwards;}
-.coha-puzzle-loader div {  border-radius: 50%;  position: absolute;  margin: auto;  top: 0;  left: 0;  right: 0;  bottom: 0;  border: 5px solid;  border-top-color: transparent;  border-bottom-color: transparent;  animation: cohaPuzzleLoaderInfinite 4s linear infinite;  box-sizing: border-box;}
-.coha-puzzle-loader div:nth-child(1) {  height: 20%;  width: 20%;  animation-delay: 0s; }
-.coha-puzzle-loader div:nth-child(2) {height: 40%;width: 40%;animation-delay: 0.5s; }
-.coha-puzzle-loader div:nth-child(3) {height: 60%;width: 60%;animation-delay: 1s; }
-.coha-puzzle-loader div:nth-child(4) {height: 80%;width: 80%;animation-delay: 1.5s; }
-.coha-puzzle-loader div:nth-child(5) {height: 100%;width: 100%;animation-delay: 2s; }
-@keyframes cohaPuzzleLoaderStart {
-  100% {transform: rotate(360deg);}
-}
-@keyframes cohaPuzzleLoaderInfinite {
-  50% {transform: rotate(360deg);}
-}
-
-
 
