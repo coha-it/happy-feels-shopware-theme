@@ -193,7 +193,6 @@ blockquote {
 
 /* Fullscreen-video-emotion */
 .fullscreen-video--emotion {min-height: 500px; height: 100vh; min-width: 320px;}
-.fullscreen-video--emotion {/*min-height: 100vh; height: auto; min-width: 320px;*/}
 
 /* NAVIGATION */
 .navigation-main .navigation--link { text-transform: uppercase; color: #000; font-weight: 500; position: relative;position: relative;font-size: 14px;}
@@ -308,6 +307,7 @@ blockquote {
 .emotion--wrapper {max-width: 1360px;}
 .emotion--wrapper .emotion--container {background: transparent;}
 body .navigation-main .container .navigation--list-wrapper {justify-content: center;}
+.navigation--list-wrapper .navigation--entry {}
 .navigation--list-wrapper .navigation--entry.entry--account {padding-right: 14px;} 
 /* //EXPERIMENTAL */
 
@@ -799,7 +799,7 @@ a {color: #323d42;}
 .stickish-wrapper * {margin: 0;}
 
 .stickish-item {position: relative;z-index: 5; z-index: 405; transition: margin 400ms cubic-bezier(0.37, 0.13, 0.64, 0.99);}
-.stickish-item.fixed {position: fixed;top: 0;width: calc(100% - 25px); width: 100%; margin-left: -15px;}
+.stickish-item.fixed {position: fixed;top: 0;width: calc(100% - 25px);margin-left: -15px;}
 .stickish-item.fixed.absolute {position: absolute;width: 100vw;}
 
 .stickish-item h2 {font-size: 1.75em;line-height: 1;font-weight: 600;}
@@ -1147,13 +1147,14 @@ body .emotion--mode-rows .emotion--product-slider {
 .account--menu .navigation--headline {font-weight: 600;text-transform: uppercase;letter-spacing: .1em;}
 
 /* Cookie */
-.page-wrap--cookie-permission .cookie-permission--container {display: flex;align-items: center;justify-content: center;}
-.page-wrap--cookie-permission .cookie-permission--container .cookie-permission--content {width: auto !important;}
-.page-wrap--cookie-permission .cookie-permission--container .cookie-permission--button {position: unset !important;}
-.page-wrap--cookie-permission .cookie-permission--container .cookie-permission--button .btn {margin: 5px !important;}
+.page-wrap--cookie-permission { font-size: 12px; font-size: calc(12px + .2vw); padding: 0; border: 0; max-width: 770px; margin: auto; right: 0; left: 0; background: transparent; }
+.page-wrap--cookie-permission .cookie-permission--container {display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px; box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0.12); margin: 10px; width: auto; background: #fff;}
+.page-wrap--cookie-permission .cookie-permission--container .cookie-permission--content {width: auto !important; width: fit-content !important; padding: 0;text-align: left;}
+.page-wrap--cookie-permission .cookie-permission--container .cookie-permission--button {position: unset !important; flex-shrink: 0; width: auto !important;}
+.page-wrap--cookie-permission .cookie-permission--container .cookie-permission--button .btn {margin: 5px !important; padding: 10px; line-height: 1;}
 
 @media screen and (max-width: 770px) {
-    .page-wrap--cookie-permission .cookie-permission--container {flex-flow: column;}
+    .page-wrap--cookie-permission .cookie-permission--container { flex-flow: column; padding: 10px; }
 }
 
 /* Quickfix */
