@@ -24,11 +24,11 @@ var coha = {
     // Basic Config
     _init: function() {},
     _settings: {
-        debug: true
+        bDebug: false
     },
-    _debug: function(c) {
-        if(coha._settings.debug == true) {
-            // console.log(c);
+    log: function(msg) {
+        if (coha._settings.bDebug) {
+            console.log(msg);
         }
     },
 
@@ -61,7 +61,6 @@ var coha = {
     fEndlessLoop: function() {}
 
 };
-var debug = coha._debug;
 
 // Initialize Once
 coha._initOnce = function() {
@@ -456,7 +455,7 @@ coha._initMembersOnce = function() {
                 var member = label.closest('.blog--entry');
 
                 if(clickedText === label.text()) {
-                    // console.log('highlight!');
+                    // coha.log('highlight!');
                     coha.team.highlight([
                         label, member
                     ]);
@@ -580,7 +579,7 @@ coha._initAosClasses = function() {
 };
 
 coha.fIfEveryAjaxLoaded = function() {
-    console.log('Everything is now Loaded');
+    coha.log('Everything is now Loaded');
     coha._initMultipleTimes();
     coha.windowResize();
     aos_init();
@@ -605,14 +604,14 @@ coha.fEndlessLoop = function() {
 
 document.asyncReady(function() {
     // Async Ready
-    console.log('Async Ready');
+    coha.log('Async Ready');
 
     // On Document Ready
     jQuery(document).ready(function ($) {
         'use strict';
 
         // Documenet Ready
-        console.log('document ready 1');
+        coha.log('document ready 1');
 
         // Tmp Cart Fix (with Ajax Call)
         jQuery.post(window.controller.ajax_add_article);
@@ -624,7 +623,7 @@ document.asyncReady(function() {
         // On Ajax-Complete
         $(document).ajaxComplete(function() {
             // Ajax Complete
-            console.log('Ajax Complete');
+            coha.log('Ajax Complete');
 
             // Initialize Coha Multiple Times
             coha._initMultipleTimes();
