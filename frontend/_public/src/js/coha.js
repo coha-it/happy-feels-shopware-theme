@@ -621,29 +621,29 @@ document.asyncReady(function() {
         coha._initOnce(); // Once
         coha._initMultipleTimes(); // And Multiple Times
 
-        // // On Ajax-Complete
-        // $(document).ajaxComplete(function() {
-        //     // Ajax Complete
-        //     console.log('Ajax Complete');
+        // On Ajax-Complete
+        $(document).ajaxComplete(function() {
+            // Ajax Complete
+            console.log('Ajax Complete');
 
-        //     // Initialize Coha Multiple Times
-        //     coha._initMultipleTimes();
+            // Initialize Coha Multiple Times
+            coha._initMultipleTimes();
 
-        //     // If not already Inited Once
-        //     if (coha.bInitOnceAfterAjax) {
-        //         coha._initOnceAfterAjax();
-        //     }
+            // If not already Inited Once
+            if (coha.bInitOnceAfterAjax) {
+                coha._initOnceAfterAjax();
+            }
 
-        //     // One Second After
-        //     setTimeout(function () {
-        //         coha.fIfEveryAjaxLoaded();
-        //     }, 1000);
-        // });
+            // One Second After
+            setTimeout(function () {
+                coha.fIfEveryAjaxLoaded();
+            }, 1000);
+        });
 
-        // // One Second After
-        // setTimeout(function () {
-        //     coha.fIfEveryAjaxLoaded();
-        // }, 1000);
+        // One Second After
+        setTimeout(function () {
+            coha.fIfEveryAjaxLoaded();
+        }, 1000);
 
         // Start The Endless Loop
         // coha.fEndlessLoop();
@@ -654,13 +654,13 @@ document.asyncReady(function() {
         });
     });
 
-    // document.onreadystatechange = function() {
-    //     // On Ready State
-    //     if (document.readyState === 'complete') {
-    //         // Ready State Complete
-    //         coha.fIfEveryAjaxLoaded();
-    //     }
-    // };
+    document.onreadystatechange = function() {
+        // On Ready State
+        if (document.readyState === 'complete') {
+            // Ready State Complete
+            coha.fIfEveryAjaxLoaded();
+        }
+    };
 });
 
 document.onreadystatechange = function() {
