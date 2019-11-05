@@ -65,10 +65,14 @@
 {* Emotion Loader *}
 {block name='frontend_index_emotion_loading_overlay'}
     {if $hasEmotion}
-        <div class="coha-puzzle-loader">
-            <div></div><div></div>
-            <div></div><div></div>
-            <div></div>
+        <div class="emotion--overlay">
+            <i class="emotion--loading-indicator">
+                <div class="coha-puzzle-loader">
+                    <div></div><div></div>
+                    <div></div><div></div>
+                    <div></div>
+                </div>
+            </i>
         </div>
     {/if}
 {/block}
