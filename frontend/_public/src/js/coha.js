@@ -614,6 +614,9 @@ document.asyncReady(function() {
         // Documenet Ready
         console.log('document ready 1');
 
+        // Tmp Cart Fix (with Ajax Call)
+        jQuery.post(window.controller.ajax_add_article);
+
         // Initialize Coha!
         coha._initOnce(); // Once
         coha._initMultipleTimes(); // And Multiple Times
@@ -652,19 +655,19 @@ document.asyncReady(function() {
         });
     });
 
-    document.onreadystatechange = function(){
+    document.onreadystatechange = function() {
         // On Ready State
-         if(document.readyState === 'complete'){
+        if (document.readyState === 'complete') {
             // Ready State Complete
             coha.fIfEveryAjaxLoaded();
-         }
+        }
     }
 });
 
-document.onreadystatechange = function(){
+document.onreadystatechange = function() {
     // On Ready State
-     if(document.readyState === 'complete'){
+    if (document.readyState === 'complete') {
         // Ready State Complete
         coha.fIfEveryAjaxLoaded();
-     }
-}
+    }
+};
