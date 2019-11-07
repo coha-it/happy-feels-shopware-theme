@@ -1161,8 +1161,6 @@ body .emotion--mode-rows .emotion--product-slider {
 .entry--cart .navigation--link {padding-top: 4px;padding-bottom: 0;}
 .emotion--container.not-relative {position: inherit;}
 
-/* TMP */.navigation--link[title=Shop] span:after{content:"Neu";pointer-events: none; position:absolute;top:-10px;color:#fff;background-color:#afc5cb;font-weight:700;right:0;display:inline-block;padding:2px 5px;border-radius:20px;font-size:10px;transform:rotate(10deg)}
-
 /* End: Quickfix */
 
 /* Loader */
