@@ -69,7 +69,7 @@
       "description": {json_encode($sArticle.description, true)},
       "offers": {
         "@type": "Offer",
-        "url": {$sArticle.linkDetailsRewrited},
+        "url": "{$sArticle.linkDetailsRewrited}",
         "price": {json_encode($sArticle.price, true)},
         "priceCurrency": "EUR",
         "availability": {json_encode($sTmpStock, true)},
