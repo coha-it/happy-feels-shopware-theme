@@ -19,7 +19,7 @@
 
     {if $sArticle.attributes.core.coha_as_details_hide_prices == "0"}
       {* Price Unhidden? *}
-      {assign var=sTmpPrice value=$sArticle.price}
+      {assign var=sTmpPrice value=$sArticle.price_numeric}
     {else}
       {* Price hidden *}
       {assign var=sTmpPrice value=false}
