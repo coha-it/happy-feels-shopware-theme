@@ -509,6 +509,19 @@ body .navigation-main .container .navigation--list-wrapper {justify-content: cen
 .blog--detail .blog--image {box-shadow: 0 6px 25px -15px rgba(0, 0, 0, 0.22);}
 .blog--detail .blog--thumbnail {border: 0;box-shadow: 0 2px 15px -5px rgba(0, 0, 0, 0.22);}
 
+/* BLOG: Details - Fullscreen Banner */
+.blog--fullscreen-banner .blog--detail.panel.block-group {padding-top: 0;margin-top: 0;}
+.blog--fullscreen-banner .blog--detail-header {}
+.blog--fullscreen-banner .blog--box-metadata {border-bottom: 0;padding-bottom: 0;}
+.blog--fullscreen-banner .blog--detail-image-container {width: 100%;clear: both;}
+.blog--fullscreen-banner .blog--detail-images {max-height: 450px;overflow: hidden;display: flex;align-items: center;justify-content: center;}
+.blog--fullscreen-banner .blog--detail-images a {width: 100%;height: 100%;}
+.blog--fullscreen-banner .blog--image {padding: 0;width: 100%;object-fit: contain;}
+
+/* BLOG: Mobile Special Rules */
+@media screen and (max-width: 415px) {
+	.blog--detail .blog--detail-headline {text-align: left;}
+}
 
 
 /* Start: Team */
