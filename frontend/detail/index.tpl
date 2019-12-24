@@ -17,7 +17,7 @@
     {assign var=sTmpPerformer value=''}
     {assign var=sTmpPrice value=''}
 
-    {if $sArticle.attributes.core.coha_as_details_hide_prices == "0"}
+    {if $sArticle.attributes.core.coha_as_details_hide_prices == "0" || true}
       {* Price Unhidden? *}
       {assign var=sTmpPrice value=$sArticle.price_numeric}
     {else}
