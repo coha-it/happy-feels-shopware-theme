@@ -15,6 +15,15 @@
     {assign var=sTmpAdresse value=''}
     {assign var=sTmpStock value=''}
     {assign var=sTmpPerformer value=''}
+    {assign var=sTmpPrice value=''}
+
+    {if $sArticle.attributes.core.coha_as_details_hide_prices == "0"}
+      {* Price Unhidden? *}
+      {assign var=sTmpPrice value=$sArticle.price}
+    {else}
+      {* Price hidden *}
+      {assign var=sTmpPrice value=false}
+    {/if}
 
     {foreach from=$sArticle.sProperties item=group}
       {if strtolower($group['name']) == 'ort'}
@@ -70,7 +79,9 @@
       "offers": {
         "@type": "Offer",
         "url": "{$sArticle.linkDetailsRewrited}",
-        "price": {json_encode($sArticle.price, true)},
+        {if $sTmpPrice}
+        "price": {json_encode($sTmpPrice, true)},
+        {/if}
         "priceCurrency": "EUR",
         "availability": {json_encode($sTmpStock, true)}
       },
