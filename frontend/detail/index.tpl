@@ -81,8 +81,8 @@
         "url": "{$sArticle.linkDetailsRewrited}",
         {if $sTmpPrice}
         "price": {json_encode($sTmpPrice, true)},
-        {/if}
         "priceCurrency": "EUR",
+        {/if}
         "availability": {json_encode($sTmpStock, true)}
       },
       "performer": {
