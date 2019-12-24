@@ -72,7 +72,7 @@
         "url": "{$sArticle.linkDetailsRewrited}",
         "price": {json_encode($sArticle.price, true)},
         "priceCurrency": "EUR",
-        "availability": {json_encode($sTmpStock, true)},
+        "availability": {json_encode($sTmpStock, true)}
       },
       "performer": {
         "@type": "PerformingGroup",
