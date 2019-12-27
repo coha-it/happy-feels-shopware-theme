@@ -20,6 +20,15 @@
     {assign var=sTmpAdresse value=''}
     {assign var=sTmpStock value=''}
     {assign var=sTmpPerformer value=''}
+    {assign var=sTmpPrice value=''}
+
+    {if $sArticle.attributes.core.coha_as_details_hide_prices == "0" || true}
+      {* Price Unhidden? *}
+      {assign var=sTmpPrice value=$sArticle.price_numeric}
+    {else}
+      {* Price hidden *}
+      {assign var=sTmpPrice value=false}
+    {/if}
 
     {foreach from=$sArticle.sProperties item=group}
       {if strtolower($group['name']) == 'ort'}
@@ -75,10 +84,12 @@
       "description": {json_encode($sArticle.description, true)},
       "offers": {
         "@type": "Offer",
-        "url": {$sArticle.linkDetailsRewrited},
-        "price": {json_encode($sArticle.price, true)},
+        "url": "{$sArticle.linkDetailsRewrited}",
+        {if $sTmpPrice}
+        "price": {json_encode($sTmpPrice, true)},
         "priceCurrency": "EUR",
-        "availability": {json_encode($sTmpStock, true)},
+        {/if}
+        "availability": {json_encode($sTmpStock, true)}
       },
       "performer": {
         "@type": "PerformingGroup",
