@@ -2,9 +2,14 @@
 
 {* Custom header *}
 {block name='frontend_index_header_meta_tags_opengraph'}
-    {$smarty.block.parent}
+  {$smarty.block.parent}
 
-  {* GOOGLE EVENTS / SNIPPETS!!! *}
+
+  {assign var=sTmpEventDate value=$sArticle.attributes.core.coha_event_date}
+
+  {if $sTmpEventDate}
+
+    {* GOOGLE EVENTS / SNIPPETS!!! *}
 
     {* {$sArticle|@var_dump} *}
     {* {$sArticle.attributes|@var_dump} *}
@@ -41,6 +46,7 @@
         {array_push($aTmpImages, $item) && false}
       {/if}
     {/foreach}
+
     {* Get Images *}
     {foreach from=$sArticle.images key=key item=item}
       {if $key == 'source'}
@@ -59,7 +65,7 @@
       "@context": "https://schema.org",
       "@type": "Event",
       "name": {json_encode($sArticle['articleName'], true)},
-      "startDate": "{date("Y-m-d\TH:i:s", strtotime($sArticle.attributes.core.coha_event_date))}",
+      "startDate": "{date("Y-m-d\TH:i:s", strtotime($sTmpEventDate))}",
       "location": {
         "@type": "Place",
         "name": {json_encode($sTmpOrt, true)},
@@ -80,5 +86,6 @@
       }
     }
     </script>
+  {/if}
 {/block}
 
