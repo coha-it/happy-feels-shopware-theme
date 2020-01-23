@@ -89,11 +89,30 @@ coha._initOnce = function() {
         coha.generateBobbles($('.bobbles'));
     });
 
+    // Init Product Attributes
+    coha._initProductAttributes();
+
     // Init Members Once
     coha._initMembersOnce();
 
     // Init Multiple Times
     coha._initMultipleTimes();
+};
+
+coha._initProductAttributes = function() {
+    var labels = $('.product--properties-label');
+
+    labels.each(function(i, e){
+        var elem = $(e)
+        switch(elem.text().toLowerCase()) {
+            case "datum:":
+            case "date:":
+                var b = elem.next('.product--properties-value')
+                var bt = b.text()
+                b.html(bt.replace(/\,\ /g, "<br>"))
+                break;
+        }
+    });
 };
 
 coha._initOnceAfterAjax = function() {
