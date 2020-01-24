@@ -1178,3 +1178,7 @@ body .emotion--mode-rows .emotion--product-slider {
 
 /* Loader */
 
+/* CMS Cat Banner */
+body .category--teaser .hero--text {padding: 0;}
+
+
