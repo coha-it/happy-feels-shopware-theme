@@ -118,7 +118,14 @@ h2.yellow-square:before {background-color: #efd84d;height: 100%;top: 0;padding: 
 .pl-15 {padding-left: 15px !important;}
 
 .p-25 {padding: 25px !important;}
+.pt-25 {padding-top: 25px !important;}
+.pr-25 {padding-right: 25px !important;}
+.pb-25 {padding-bottom: 25px !important;}
+.pl-25 {padding-left: 25px !important;}
 
+.p-25 {padding: 25px !important;}
+
+.ma-0 {margin: 0 !important;}
 .mt-0 {margin-top: 0 !important;}
 .mr-0 {margin-right: 0 !important;}
 .mb-0 {margin-bottom: 0 !important;}
@@ -984,7 +991,8 @@ a {color: #323d42;}
 .progress-circle p i {font-size: .75em;font-style: initial;margin-top: .2em;}
 .progress-circle .subtitle {font-size: 15px;position: absolute;top: 50%;transform: translateY(80%);left: 0;right: 0; font-weight: 600;}
 
-.is--ctl-checkout .header-main .header-inner {height: auto !important;}
+.is--ctl-checkout .header-main .header-inner {min-height: 80px; height: auto !important;}
+
 
 @keyframes videoSubtextAnim {
   0%  {opacity: 0;transform: scale(1);}
@@ -1037,6 +1045,9 @@ body .emotion--mode-rows .emotion--product-slider {
   .box--list.product--box .product--image .image--element img {top: 0;left: 0;margin: 0;min-height: 100%;width: auto;object-fit: cover;}
   .box--list.product--box .product--info {padding: 0 15px;padding: 10px 15px;padding-left: 14rem;min-height: 190px;}
 }
+
+input.add-product--field.block {float: left;}
+
 
 /* FORMS */
 .forms--content .forms--checkbox input[type="checkbox"] {margin-right: 15px;}
