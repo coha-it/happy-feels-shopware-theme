@@ -991,7 +991,7 @@ a {color: #323d42;}
 .progress-circle p i {font-size: .75em;font-style: initial;margin-top: .2em;}
 .progress-circle .subtitle {font-size: 15px;position: absolute;top: 50%;transform: translateY(80%);left: 0;right: 0; font-weight: 600;}
 
-.is--ctl-checkout .header-main .header-inner {min-height: 80px; height: auto !important;}
+/* .is--ctl-checkout .header-main .header-inner {min-height: 80px; height: auto !important;} */
 
 
 @keyframes videoSubtextAnim {
