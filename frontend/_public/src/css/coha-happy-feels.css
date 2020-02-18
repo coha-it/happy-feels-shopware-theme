@@ -621,8 +621,10 @@ body .navigation-main .container .navigation--list-wrapper {justify-content: cen
 .box--minimal .product--image .image--media {display: block;width: 100%;}
 .box--minimal .product--image .image--element img {position: relative;width: 100%;object-fit: cover;}
 .box--minimal .product--btn-container {transform: translateY(1px);}
-
 .box--minimal .product--badges {margin-left: 10px;}
+
+.box--minimal .buybox--button.btn { padding-left: 0; padding-right: 0; overflow: hidden; }
+.box--minimal .buybox--button.btn .icon--arrow-right { display: none !important; }
 
 
 /* Start: Team 2 */
