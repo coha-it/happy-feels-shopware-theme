@@ -151,6 +151,19 @@ coha._initMultipleTimes = function() {
 
     // Fake Window Resize
     coha.windowResize();
+
+    // Init Active a-Hrefs
+    coha._initActiveLinks();
+};
+
+coha._initActiveLinks = function() {
+    jQuery('a').each(function (i,e) {
+        var a = $(e);
+        if (a.attr('href') == window.location.href) {
+            a.addClass('active is--active');
+            a.attr('active', true);
+        }
+    });
 };
 
 coha.windowResize = function() {
