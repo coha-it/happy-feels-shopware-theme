@@ -7,9 +7,9 @@
 
 
 /* HTML / Body Size */
-@media screen and (min-width: 1700px) { html {font-size: 17px;} }
-@media screen and (min-width: 2000px) { html {font-size: 18px;} }
-@media screen and (min-width: 2500px) { html {font-size: 18px;} }
+@media screen and (min-width: 1700px) { html {font-size: 16px;} }
+@media screen and (min-width: 2000px) { html {font-size: 16px;} }
+@media screen and (min-width: 2500px) { html {font-size: 16px;} }
 
 textarea,
 input[type="text"],
@@ -600,10 +600,32 @@ body .navigation-main .container .navigation--list-wrapper {justify-content: cen
 
 
 /* Product Badges */
-.product--badges {pointer-events: none;}
 .product--badges .product--badge.coha--badge.termin.label {background: #afcdd4;}
-.product--badges .product--badge.coha--badge.ausbildung.label {background: #e1c831;}
+.product--badges .product--badge.coha--badge.ausbildung.label { background: #54656b; }
 .product--badges .product--badge.coha--badge.kostenlos {background: #41bb94;}
+
+.product--box .product--badges { position: static; min-height: 25px; display: flex; align-items: center; justify-content: start; align-self: start; pointer-events: all; max-width: 100%; overflow-x: scroll; }
+.product--box .product--badges .product--badge { transition:500ms; margin: 0; border-radius: 5px; font-size: 12px; line-height: 1em; padding: .4em .55em .3em; display: inline; opacity: .9; margin: 0 4px;  }
+.product--box .product--badges .product--badge:first-child {margin-left: 0;}
+.product--box:hover .product--badges .product--badge {opacity: 1;}
+
+
+
+/* Box Minimal */
+.box--minimal {padding: 2.5% 0 1.5% 1.75%;}
+.box--minimal .box--content {padding: 0;}
+.box--minimal .product--info { padding-left: 15px; padding-right: 15px; /*min-height: 210px; */ display: flex; align-items: flex-start; justify-content: start; flex-flow: column; text-align: left; align-self: flex-start; }
+.box--minimal .product--info .product--title {     min-height: 2.5em;     margin-top: 10px;     margin-bottom: 0px;     -webkit-line-clamp: 2;     text-overflow: ellipsis;     overflow: hidden;     display: -webkit-box; }
+.box--minimal .product--info .product--description {height: 3.5rem;-webkit-line-clamp: 3;margin-bottom: 0;}
+.box--minimal .product--image {height: auto;}
+.box--minimal .product--image .image--media {display: block;width: 100%;}
+.box--minimal .product--image .image--element img {position: relative;width: 100%;object-fit: cover;}
+.box--minimal .product--btn-container {transform: translateY(1px);}
+.box--minimal .product--badges {margin-left: 10px;}
+
+.box--minimal .buybox--button.btn { padding-left: 0; padding-right: 0; overflow: hidden; }
+.box--minimal .buybox--button.btn .icon--arrow-right { display: none !important; }
+
 
 /* Start: Team 2 */
 .members .emotion--blog .blog--container .blog--entry {display: grid;grid-template-columns: auto 2fr;align-items: center;align-self: center;padding: 0;margin: 20px 0;min-width: 450px;}
