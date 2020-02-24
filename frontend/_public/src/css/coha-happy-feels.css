@@ -1064,7 +1064,7 @@ body .emotion--mode-rows .emotion--product-slider {
 @media screen and (min-width: 480px) {
   .box--list.product--box .box--content {padding: 0;}
   .box--list.product--box .product--image {height: 100%;width: 12rem;}
-  .box--list.product--box .product--image .image--element img {top: 0;left: 0;margin: 0;min-height: 100%;width: auto;object-fit: cover;}
+  .box--list.product--box .product--image .image--element img {top: 0;left: 0;margin: 0;min-height: 100%; min-width: 100%; width: auto;object-fit: cover;}
   .box--list.product--box .product--info {padding: 0 15px;padding: 10px 15px;padding-left: 14rem;min-height: 190px;}
 }
 
