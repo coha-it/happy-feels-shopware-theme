@@ -25,6 +25,7 @@ textarea {height: 100px;}
 ul {}
 ol {}
 li {list-style-position: inside;}
+.emotion--element .emotion--html .html--content li {list-style-position: outside;margin-left: 25px;}
 
 /* Select */
 .select-field select,
