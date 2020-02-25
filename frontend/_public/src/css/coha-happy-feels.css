@@ -266,8 +266,8 @@ blockquote {
 @media screen and (min-width: 770px) {
     .header-main .header-inner {height: 170px;height: 100%;}
     .header-main .logo-main {padding: 20px;}
-
     .navigation-main > .container {padding-bottom: 10px;}
+    .text-split-2 {column-count: 2;}
 }
 
 /* Desktop */
@@ -1213,5 +1213,4 @@ input.add-product--field.block {float: left;}
 
 /* CMS Cat Banner */
 body .category--teaser .hero--text {padding: 0;}
-
 
