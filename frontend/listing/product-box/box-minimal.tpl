@@ -9,6 +9,20 @@
     </div>
 {/block}
 
+{* Default price *}
+{block name='frontend_listing_box_article_price_default'}
+    <span class="price--default is--nowrap{if $sArticle.has_pseudoprice} is--discount{/if}">
+        {if $sArticle.priceStartingFrom}
+            {s name='ListingBoxArticleStartsAt'}{/s} 
+            {* Take smallest instead of largest price! *}
+            {$sArticle.prices[ count($sArticle.prices)-1 ].price|currency}
+        {else}
+            {$sArticle.price|currency}
+        {/if}
+        {s name="Star"}{/s}
+    </span>
+{/block}
+
 {block name="frontend_listing_box_article_content"}
     <div class="box--content is--rounded">
                         
