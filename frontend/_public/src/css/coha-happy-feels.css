@@ -695,10 +695,13 @@ body .navigation-main .container .navigation--list-wrapper {justify-content: cen
 .product-slider--arrow.arrow--prev {padding-right: 5px;}
 
 /* JS Modal */
-.js--modal {background: rgba(0, 0, 0, 0.26);}
+.js--modal { backdrop-filter: blur(3px);}
 .js--modal .image-slider--thumbnails {background: transparent; text-align: center; display: block;}
 .js--modal .thumbnail--link {border: 0; background: rgba(0, 0, 0, 0.33);}
 .js--modal .image-slider--thumbnails-slide {text-align: center;}
+
+/* JS Modal */
+.js--modal.image-gallery--modal {background: rgba(0, 0, 0, 0.26);}
 
 /* Tabs */
 .js--tab-menu .tab--link {}
