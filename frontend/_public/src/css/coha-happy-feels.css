@@ -1097,7 +1097,7 @@ input.add-product--field.block {float: left;}
 .coha-table .title {    font-size: 2em;    font-weight: 500;    color: #656f73;    text-align: center;}
 .coha-table .subtitle {    font-size: .8em;    font-weight: 500;    color: #7e878c;}
 .coha-quote {    text-align: center;    font-weight: 500;    font-size: 26px;    text-transform: uppercase;    letter-spacing: .2em;}
-.btn-flying{position: fixed;bottom: 5%;left: 10px;right: 10px;width: 80vw;margin: auto;max-width: 405px;min-width: 300px;z-index: 9999;text-align: center;box-shadow: 0px 2px 22px -5px rgba(0, 0, 0, 0.25);}
+.btn-flying{position: fixed;bottom: 5%;left: 10px;right: 10px;width: 80vw;margin: auto;max-width: 405px;min-width: 300px;z-index: 6000;text-align: center;box-shadow: 0px 2px 22px -5px rgba(0, 0, 0, 0.25);}
 
 
 
