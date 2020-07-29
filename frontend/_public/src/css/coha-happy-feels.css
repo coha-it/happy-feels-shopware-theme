@@ -62,6 +62,7 @@ li {list-style-position: inside;}
 .product--details .product--header .product--title {width: 100%;}
 .product--details .buybox--form {max-width: 450px;}
 .product--details .product--actions {border-bottom: 0;}
+.product--details .product--properties {margin: auto;}
 
 @media screen and (min-width: 64em) {
     .product--details .product--image-container {width: 47%;margin-left: 2%;margin-right: 1%;}
@@ -70,15 +71,27 @@ li {list-style-position: inside;}
 
 .product--details .product--image-container .image-slider--slide .image--element {width: 100%;}
 .product--details .product--image-container .image-slider--slide .image--element img {object-fit: contain;width: 100%;height: 100%;}
+.product--details .configurator--form .select-field {margin-bottom: 1em;}
+.product--details .product--buybox .price--discount .price--content {color: #425d64;}
+.product--details .product--buybox .price--discount-icon {display: none;}
+.product--details .content--title {display: none;}
 
-
+.content--description {max-width: 1000px;margin: auto;}
 .content--description ul.content--list.list--unstyled {  text-align: center;}
 .content--description ul.content--list.list--unstyled li {margin: 10px 5px;}
 
+.product--description h1, .product--description h2 { position: relative; }
+.product--description h1:before, .product--description h2:before { content: ""; padding: .25em; background: #e26f6f; display: inline-block; border-radius: 50%; position: absolute; left: 0; top: 0; transform: translate(-175%, 0%); }
+
+/* Configurator / Buttons for Variants */
+.configurator--variant .option--label {line-height: 1.15;display: flex;align-items: center;justify-content: center;align-self: center;}
+.configurator--description {margin-bottom: 0;}
+
 /* Header Logo Centering*/
-.header-main .top-bar {
-    display: none;
-}
+.header-main {z-index: 1;}
+.header-main .top-bar {display: none;}
+.header-main .container {text-align: center;}
+
 /*
 .header-main .logo-main .logo--link {
     height: 80px;
@@ -512,6 +525,7 @@ body .navigation-main .container .navigation--list-wrapper {justify-content: cen
 .blog--detail-tags a {border: 1px solid #f5f5f5;background: #fff;box-shadow: 0 2px 7px -8px rgba(0, 0, 0, 0.13);padding: 3px 10px;border-radius: 9px;}
 .blog--detail .blog--detail-description.block:first-letter {font-size: 4.5em; font-family: Tisa,  TisaPro, ff-tisa-web-pro; line-height: .5; float: left;margin: .15em .1em .25em 0;}
 .comments--actions {text-align: right;}
+.blog--detail .blog--image {padding: 0; border-radius: 4px;}
 
 /* BLOG: Image */
 .blog--detail .blog--image {box-shadow: 0 6px 25px -15px rgba(0, 0, 0, 0.22);}
@@ -601,6 +615,7 @@ body .navigation-main .container .navigation--list-wrapper {justify-content: cen
 
 
 /* Product Badges */
+.product--box .product--badges {overflow: hidden;}
 .product--badges .product--badge.coha--badge.termin.label {background: #afcdd4;}
 .product--badges .product--badge.coha--badge.ausbildung.label { background: #54656b; }
 .product--badges .product--badge.coha--badge.kostenlos {background: #41bb94;}
@@ -610,6 +625,11 @@ body .navigation-main .container .navigation--list-wrapper {justify-content: cen
 .product--box .product--badges .product--badge:first-child {margin-left: 0;}
 .product--box:hover .product--badges .product--badge {opacity: 1;}
 
+.product--box .product--badges .badge--discount {white-space: nowrap;}
+
+/* Badges Vorrübergehend */
+.product--box .product--badges .product--badge:not(.datum):not(.badge--discount) {display: none;}
+i.icon--percent2:after {content: "Corona Special";font-family: Lato;font-weight: 700;text-transform: uppercase;letter-spacing: .01em;margin-left: 5px;}
 
 
 /* Box Minimal */
@@ -619,8 +639,8 @@ body .navigation-main .container .navigation--list-wrapper {justify-content: cen
 .box--minimal .product--info .product--title {     min-height: 2.5em;     margin-top: 10px;     margin-bottom: 0px;     -webkit-line-clamp: 2;     text-overflow: ellipsis;     overflow: hidden;     display: -webkit-box; }
 .box--minimal .product--info .product--description {height: 3.5rem;-webkit-line-clamp: 3;margin-bottom: 0;}
 .box--minimal .product--image {height: auto;}
-.box--minimal .product--image .image--media {display: block;width: 100%;}
-.box--minimal .product--image .image--element img {position: relative;width: 100%;object-fit: cover;}
+.box--minimal .product--image .image--media {display: block;width: 100%;height: 0;padding-top: 100%;}
+.box--minimal .product--image .image--element img {position: relative;width: 100%;object-fit: cover; position: absolute; min-height: 100%; }
 .box--minimal .product--btn-container {transform: translateY(1px);}
 .box--minimal .product--badges {margin-left: 10px;}
 
@@ -654,6 +674,8 @@ body .navigation-main .container .navigation--list-wrapper {justify-content: cen
 
 /* Product Slider */
 .product-slider--container.is--horizontal {text-align: center;}
+.product-slider .product--box .product--price .price--default.is--discount { color: #fff; display: block; }
+ 
 
 /* Product / Article Listing */
 .listing--container {overflow: visible;overflow: inherit;float: none;clear: both;}
@@ -669,6 +691,10 @@ body .navigation-main .container .navigation--list-wrapper {justify-content: cen
 .product--box .product--description {height: 6em;}
 .product--box .product--description,
 .product--box .product--description p {-webkit-line-clamp: 4;}
+
+/* Rot zu Schwarz bei Streichpreisen */
+.product--box .product--price .price--default.is--discount,
+.product--box .product--badges .badge--discount {background-color: #425d64;}
 
 /* Product Description List Style */
 .product--description ul {padding-left: 20px;}
@@ -727,10 +753,7 @@ table tr {border: 0;}
 .product--details .product--properties td,
 table td {color: inherit; border: 0; padding: 5px;padding: 13px 15px;}
 
-table td:first-child {border-right: 4px solid black;}
-
-/* Product Details */
-.product--details .content--title {display: none;}
+table td:first-child {border-right: 4px solid black; border-right: inherit;}
 
 /* Link */
 a {color: #323d42;}
@@ -828,6 +851,9 @@ a {color: #323d42;}
 
 @media screen and (min-width: 48em) {
     .sidebar-main.off-canvas {overflow: visible; }
+    .sidebar--navigation.categories--navigation.is--level0 > .navigation--entry:not(.is--active):not(:last-child) {
+      display: none;
+    }
 }
 
 .steps--container {
@@ -996,8 +1022,7 @@ a {color: #323d42;}
 .text-overflow + .trigger > span {display: none; text-decoration: underline;}
 .text-overflow.cutted + .trigger > span:nth-of-type(1) {display: inline-block;}
 .text-overflow:not(.cutted) + .trigger {padding: 0;margin: -20px 0;}
-.text-overflow:not(.cutted) + .trigger > span:nth-of-type(2) {display: inline-block;}
-
+.text-overflow:not(.cutted) + .trigger > span:nth-of-type(2) {display: inline-block;margin-top: 25px;color: white;}
 
 /* Pan Zoom */
 .panWrapper {background-color: rgba(0, 0, 0, 0.75);backdrop-filter: blur(5px);transition: 200ms;}
@@ -1217,4 +1242,45 @@ input.add-product--field.block {float: left;}
 
 /* CMS Cat Banner */
 body .category--teaser .hero--text {padding: 0;}
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .page-wrap {display: block;}
+}
+
+.block-prices--container .block-prices--cell { color: #54656c; }
+
+
+/* Strike Through*/
+.durchgestrichen, .strikethrough {text-decoration: line-through;}
+.hidden_c {display: none !important;}
+
+/* Product Table - Basket Footer */
+.product--table .basket--footer {
+  background: rgba(130, 164, 174, .29);
+  border: 0;
+}
+
+
+
+form.table--add-product.add-product--form.block-group {text-align: right;margin-left: auto;}
+form.table--add-product.add-product--form.block-group input {border-style: solid;border-width: 1px 0 1px 1px;border-color: #dbe4e7;}
+
+
+/* Coupon */
+
+.product--table .add-voucher--panel {display: flex;height: 3rem;align-items: stretch;justify-content: stretch;align-self: stretch;}
+
+
+.product--table .add-voucher--field,
+.product--table .add-voucher--button {height: 100% !important;}
+
+.product--table .add-voucher--button {min-width: 50px;}
+
+.product--table .add-voucher--field {font-family: Consolas, monospace, monospaced;letter-spacing: .1em;border-right: 0;font-size: 20px;}
+.product--table .add-voucher--field,
+.product--table .add-voucher--field:focus,
+.product--table .add-voucher--field:active {color: #000;}
+.product--table .add-voucher--field::placeholder {font-family: "Lato", "ff-tisa-web-pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;letter-spacing: 0em;line-height: 1.5;}
+
 
