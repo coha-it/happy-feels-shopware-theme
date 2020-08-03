@@ -88,7 +88,7 @@ li {list-style-position: inside;}
 .configurator--description {margin-bottom: 0;}
 
 /* Header Logo Centering*/
-.header-main {z-index: 1;}
+/* .header-main {z-index: 1;} */
 .header-main .top-bar {display: none;}
 .header-main .container {text-align: center;}
 
@@ -330,6 +330,7 @@ blockquote {
 body .navigation-main .container .navigation--list-wrapper {justify-content: center;}
 .navigation--list-wrapper .navigation--entry {}
 .navigation--list-wrapper .navigation--entry.entry--account {padding-right: 14px;} 
+.navigation--entry.entry--account {z-index: 8000;}
 /* //EXPERIMENTAL */
 
 
@@ -694,7 +695,7 @@ i.icon--percent2:after {content: "Corona Special";font-family: Lato;font-weight:
 
 /* Rot zu Schwarz bei Streichpreisen */
 .product--box .product--price .price--default.is--discount,
-.product--box .product--badges .badge--discount {background-color: #425d64;}
+.product--box .product--badges .badge--discount {/*background-color: #425d64;*/}
 
 /* Product Description List Style */
 .product--description ul {padding-left: 20px;}
@@ -1282,5 +1283,6 @@ form.table--add-product.add-product--form.block-group input {border-style: solid
 .product--table .add-voucher--field:focus,
 .product--table .add-voucher--field:active {color: #000;}
 .product--table .add-voucher--field::placeholder {font-family: "Lato", "ff-tisa-web-pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;letter-spacing: 0em;line-height: 1.5;}
+
 
 
