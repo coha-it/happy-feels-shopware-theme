@@ -186,8 +186,8 @@ coha.scrollMagicElement = function(sClass) {
                 var scene0 = new ScrollMagic.Scene(
                     {
                         triggerElement: sClass,
-                        duration: '35%', 
-                        /*triggerHook: 0.95*/
+                        duration: '35%'
+                        /* triggerHook: 0.95 */
                     })
                     .setTween(tween0)
                     .addTo(CohaSmc);
