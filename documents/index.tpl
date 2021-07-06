@@ -8,8 +8,8 @@
     {$smarty.block.parent}
     {foreach from=$positions item=position key=number}
         {$coha_core = $position.meta.attributes.core}
-        {$coha_start = $coha_core->get('coha_event_date')}
-        {$coha_end = $coha_core->get('coha_event_date_end')}
+        {$coha_start = $coha_core['coha_event_date']}
+        {$coha_end = $coha_core['coha_event_date_end']}
 
         {if $coha_start && $coha_end}
             {s name="DocumentIndexServicePeriodStartStop"}<p>Der Leistungszeitraum für den Artikel "{$position.name}" (Artikel-Nummer: {$position.articleordernumber}) läuft zwischen {$coha_start} und {$coha_end}.</p>{/s}
