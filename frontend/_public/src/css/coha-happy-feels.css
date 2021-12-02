@@ -1380,4 +1380,31 @@ form.table--add-product.add-product--form.block-group input {border-style: solid
 
 
 
+/* Blog */
+.blog--box .blog--box-tags {
+  margin-top: 19px;
+}
+.blog--box .blog--box-tags  a {
+  border-radius: 9px;
+  color: #8f8f8f;
+  background: #f1f1f1;
+  padding: 4px 9px 5px 9px;
+  font-size: .82em;
+  letter-spacing: .05em;
+  font-weight: 500;
+  margin: 0 .5em 0 0;
+  line-height: 1;
+}
+
+.btn.spotify {
+  color: #fff;
+  background-color: #1DB954;
+}
+.btn.spotify:hover {
+  background-color: #13c953;
+}
+
+.btn.spotify .fab {
+  margin-right: 5px;
+}
 
