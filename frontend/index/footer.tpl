@@ -5,7 +5,7 @@
     <div class="footer--columns block-group">
         {include file='frontend/index/footer-navigation.tpl'}
 
-
+{*
 	<div class="dnf-footer">
 		<img src="https://das-neue-fuehren.de/wp-content/uploads/2021/02/email-logo-1.png" />
 		<h4>Kongress 21. - 23. April 2021</h4>
@@ -19,6 +19,8 @@ Erfahrene ExpertInnen aus Industrie, Wirtschaft und Forschung teilen ihr Wissen,
 Jetzt kostenfrei anmelden und vom 21. bis 23. April dabei sein!
 </p>
 	</div>
+*}
+
 
         {* Coha Social Media *}
         <div class="coha--social-media-wrapper">
