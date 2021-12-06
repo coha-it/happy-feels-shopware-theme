@@ -1397,11 +1397,15 @@ form.table--add-product.add-product--form.block-group input {border-style: solid
 }
 
 .btn.spotify {
-  color: #fff;
-  background-color: #1DB954;
+    color: #fff;
+    background-color: #b7b7b7;
+    padding: 2px 15px;
+    font-size: 1em;
+    line-height: 2.15em;
 }
 .btn.spotify:hover {
-  background-color: #13c953;
+    color: #fff;
+    background-color: #1DB954;
 }
 
 .btn.spotify .fab {
