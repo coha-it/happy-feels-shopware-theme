@@ -1445,6 +1445,20 @@ form.table--add-product.add-product--form.block-group input {border-style: solid
 }
 
 
-
+/* Blog Feed */
+.subscribe_feed_entries {
+  text-align: right;
+}
+.subscribe_feed_entries > a {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+.subscribe_feed_entries:hover > a {
+  opacity: .6;
+}
+.subscribe_feed_entries:hover > a:hover {
+  opacity: 1;
+}
 
 

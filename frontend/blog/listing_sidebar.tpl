@@ -15,15 +15,13 @@
     
     {* {$smarty.block.parent} *}
 
-    <div class="subcribe_entries">
+    <div class="subscribe_feed_entries">
         {block name="frontend_blog_index_subscribe_entry_atom"}
-            {$smarty.block.parent}
-            {* <a target="_blank" style="display: block; font-size: 0.8rem; opacity: 0.85; text-align: right;" href="{$sCategoryContent.atomFeed}" title="{$sCategoryContent.description|escape}">{s namespace="frontend/blog/index" name="BlogLinkAtom"}{/s}</a> *}
+            <a target="_blank" href="{$sCategoryContent.atomFeed}" title="{$sCategoryContent.description|escape}">{s namespace="frontend/blog/index" name="BlogLinkAtom"}{/s}</a>
         {/block}
 
         {block name="frontend_blog_index_subscribe_entry_rss"}
-            {$smarty.block.parent}
-            {* <a target="_blank" style="display: block; font-size: 0.8rem; opacity: 0.85; text-align: right;" href="{$sCategoryContent.rssFeed}" title="{$sCategoryContent.description|escape}">{s namespace="frontend/blog/index" name="BlogLinkRSS"}{/s}</a> *}
+            <a target="_blank" href="{$sCategoryContent.rssFeed}" title="{$sCategoryContent.description|escape}">{s namespace="frontend/blog/index" name="BlogLinkRSS"}{/s}</a>
         {/block}
     </div>
 
