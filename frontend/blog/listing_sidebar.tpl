@@ -5,6 +5,10 @@
 
 {* Subscribe Atom + RSS *}
 {block name='frontend_blog_index_subscribe'}
+
+    {* Spotify *}
+    <div class=" is--rounded filter--group block spotify-block">  <a href="www.google.de" target="_blank" class="inner"><i class="fab fa-spotify"></i>Hier geht’s zu unserem Corporate Happiness® Podcast.<p></p></a> </div>
+
     {if !$sCategoryInfo.hideFilter}
         {include file="frontend/blog/filter.tpl"}
     {/if}
