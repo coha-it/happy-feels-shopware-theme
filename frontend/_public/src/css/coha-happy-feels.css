@@ -1450,7 +1450,7 @@ form.table--add-product.add-product--form.block-group input {border-style: solid
   text-align: right;
 }
 .subscribe_feed_entries > a {
-  display: block;
+  display: inline-block;
   font-size: 0.8rem;
   opacity: 0.85;
 }

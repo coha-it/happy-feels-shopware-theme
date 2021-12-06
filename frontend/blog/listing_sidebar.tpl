@@ -20,6 +20,8 @@
             <a target="_blank" href="{$sCategoryContent.atomFeed}" title="{$sCategoryContent.description|escape}">{s namespace="frontend/blog/index" name="BlogLinkAtom"}{/s}</a>
         {/block}
 
+        <br>
+
         {block name="frontend_blog_index_subscribe_entry_rss"}
             <a target="_blank" href="{$sCategoryContent.rssFeed}" title="{$sCategoryContent.description|escape}">{s namespace="frontend/blog/index" name="BlogLinkRSS"}{/s}</a>
         {/block}
