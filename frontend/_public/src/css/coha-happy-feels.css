@@ -1424,10 +1424,10 @@ form.table--add-product.add-product--form.block-group input {border-style: solid
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 14.5px;
     line-height: 1.35;
     font-weight: bold;
-    letter-spacing: .04em;
+    letter-spacing: .03em;
     color: inherit;
     /*background: #1DB954;*/
     background: #fff;
@@ -1442,6 +1442,7 @@ form.table--add-product.add-product--form.block-group input {border-style: solid
     font-size: 1.75rem;
     margin-right: 0.45em;
     font-weight: normal;
+    color: #1DB954;
 }
 
 
