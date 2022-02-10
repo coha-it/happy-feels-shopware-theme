@@ -10,7 +10,7 @@
     <div class=" is--rounded filter--group block spotify-block">
         <a href="https://open.spotify.com/show/5ANpmgwDLJOe9tIb66KOgm" target="_blank" class="inner">
             <i class="fab fa-spotify"></i>
-            <span>Hier geht’s zu unserem Corporate Happiness® Podcast.</span>
+            {s namespace="frontend/blog/box" name="BlogGoToSpotify"}Hier geht&rsquo;s zu unserem Corporate Happiness &copy; Podcast auf Spotify{/s}
         </a>
     </div>
 
