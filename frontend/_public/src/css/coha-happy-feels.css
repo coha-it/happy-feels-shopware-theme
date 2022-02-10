@@ -1385,15 +1385,17 @@ form.table--add-product.add-product--form.block-group input {border-style: solid
   margin-top: 19px;
 }
 .blog--box .blog--box-tags  a {
-  border-radius: 9px;
-  color: #8f8f8f;
-  background: #f1f1f1;
-  padding: 4px 9px 5px 9px;
-  font-size: .82em;
-  letter-spacing: .05em;
-  font-weight: 500;
-  margin: 0 .5em 0 0;
-  line-height: 1;
+    border-radius: 9px;
+    color: #8f8f8f;
+    background: #f1f1f1;
+    padding: 7px 12px;
+    font-size: .82em;
+    letter-spacing: .05em;
+    font-weight: 500;
+    margin: 0 0.5em 5px 0;
+    line-height: 1;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 .btn.spotify {
