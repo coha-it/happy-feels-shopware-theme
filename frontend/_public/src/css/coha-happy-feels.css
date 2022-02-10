@@ -1396,6 +1396,12 @@ form.table--add-product.add-product--form.block-group input {border-style: solid
     line-height: 1;
     white-space: nowrap;
     display: inline-block;
+    transition: 200ms;
+}
+
+.blog--box .blog--box-tags a:hover {
+    color: #858585;
+    background: #e3e3e3;
 }
 
 .btn.spotify {
