@@ -1449,6 +1449,8 @@ form.table--add-product.add-product--form.block-group input {border-style: solid
 /* Blog Feed */
 .subscribe_feed_entries {
   text-align: right;
+  display: inline-block;
+  width: 100%;
 }
 .subscribe_feed_entries > a {
   display: inline-block;
